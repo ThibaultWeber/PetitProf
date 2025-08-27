@@ -1,8 +1,8 @@
 /* ========================================
-   NAVIGATION MOBILE - STYLES PRIORITAIRES
+   NAVIGATION MOBILE - STYLES SIMPLIFIÉS
    ======================================== */
 
-/* Reset et override des styles conflictuels */
+/* Reset complet pour éviter les conflits */
 .navbar {
     position: fixed !important;
     top: 0 !important;
@@ -11,7 +11,6 @@
     backdrop-filter: blur(10px) !important;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
     z-index: 1000 !important;
-    transition: all 0.3s ease !important;
 }
 
 .nav-container {
@@ -31,50 +30,7 @@
     font-weight: 700 !important;
 }
 
-/* ========================================
-   MENU HAMBURGER - STYLES DE BASE
-   ======================================== */
-
-.hamburger {
-    display: none !important;
-    flex-direction: column !important;
-    cursor: pointer !important;
-    padding: 10px !important;
-    z-index: 1001 !important;
-    position: relative !important;
-    width: 30px !important;
-    height: 30px !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.hamburger .bar {
-    width: 25px !important;
-    height: 3px !important;
-    background-color: #333 !important;
-    margin: 3px 0 !important;
-    transition: all 0.3s ease !important;
-    border-radius: 2px !important;
-    display: block !important;
-}
-
-/* État actif du hamburger */
-.hamburger.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px) !important;
-}
-
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0 !important;
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px) !important;
-}
-
-/* ========================================
-   MENU DE NAVIGATION - STYLES DE BASE
-   ======================================== */
-
+/* Menu de navigation de base */
 .nav-menu {
     display: flex !important;
     list-style: none !important;
@@ -94,7 +50,6 @@
     color: #333 !important;
     font-weight: 500 !important;
     transition: color 0.3s ease !important;
-    position: relative !important;
     padding: 0.5rem 1rem !important;
     display: block !important;
 }
@@ -103,10 +58,7 @@
     color: #2563eb !important;
 }
 
-/* ========================================
-   DROPDOWN - STYLES DE BASE
-   ======================================== */
-
+/* Dropdown de base */
 .dropdown {
     position: relative !important;
 }
@@ -150,6 +102,45 @@
     color: #3b82f6 !important;
     border-left-color: #3b82f6 !important;
     transform: translateX(5px) !important;
+}
+
+/* ========================================
+   MENU HAMBURGER - STYLES DE BASE
+   ======================================== */
+
+.hamburger {
+    display: none !important;
+    flex-direction: column !important;
+    cursor: pointer !important;
+    padding: 10px !important;
+    z-index: 1001 !important;
+    position: relative !important;
+    width: 30px !important;
+    height: 30px !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.hamburger .bar {
+    width: 25px !important;
+    height: 3px !important;
+    background-color: #333 !important;
+    margin: 3px 0 !important;
+    transition: all 0.3s ease !important;
+    border-radius: 2px !important;
+    display: block !important;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px) !important;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px) !important;
 }
 
 /* ========================================
@@ -282,35 +273,6 @@
     .dropdown.active .nav-link i {
         transform: rotate(180deg) !important;
     }
-    
-    /* Override des styles conflictuels */
-    .nav-menu.mobile-active,
-    .nav-menu[style*="position: fixed"],
-    .nav-menu[style*="top: -100vh"],
-    .nav-menu[style*="left: -100%"] {
-        position: fixed !important;
-        top: 0 !important;
-        left: -100% !important;
-        width: 100% !important;
-        height: 100vh !important;
-        background-color: white !important;
-        flex-direction: column !important;
-        justify-content: flex-start !important;
-        align-items: center !important;
-        padding-top: 80px !important;
-        transition: left 0.3s ease !important;
-        z-index: 999 !important;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.1) !important;
-        margin: 0 !important;
-        gap: 0 !important;
-        overflow-y: auto !important;
-    }
-    
-    .nav-menu.active,
-    .nav-menu.mobile-active,
-    .nav-menu[style*="left: 0"] {
-        left: 0 !important;
-    }
 }
 
 /* ========================================
@@ -381,44 +343,4 @@
     .dropdown .nav-link {
         text-align: left !important;
     }
-}
-
-/* ========================================
-   ANIMATIONS ET TRANSITIONS
-   ======================================== */
-
-.nav-menu {
-    transition: left 0.3s ease !important;
-}
-
-.dropdown-menu {
-    transition: max-height 0.3s ease !important;
-}
-
-.hamburger .bar {
-    transition: all 0.3s ease !important;
-}
-
-.dropdown .nav-link i {
-    transition: transform 0.3s ease !important;
-}
-
-/* ========================================
-   Z-INDEX ET POSITIONNEMENT
-   ======================================== */
-
-.navbar {
-    z-index: 1000 !important;
-}
-
-.hamburger {
-    z-index: 1001 !important;
-}
-
-.nav-menu {
-    z-index: 999 !important;
-}
-
-.dropdown-menu {
-    z-index: 1000 !important;
 }
