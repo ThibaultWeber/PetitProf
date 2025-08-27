@@ -19,18 +19,70 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Gestion du menu déroulant
+    // Gestion du menu déroulant - Version améliorée pour mobile et desktop
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-        if (dropdownMenu) {
-            dropdown.addEventListener('mouseenter', function() {
-                dropdownMenu.style.display = 'block';
-            });
+        const dropdownLink = dropdown.querySelector('.nav-link');
+        
+        if (dropdownMenu && dropdownLink) {
+            // Gestion desktop avec hover
+            if (window.innerWidth > 768) {
+                dropdown.addEventListener('mouseenter', function() {
+                    dropdownMenu.style.display = 'block';
+                    dropdown.classList.add('active');
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    dropdownMenu.style.display = 'none';
+                    dropdown.classList.remove('active');
+                });
+            }
             
-            dropdown.addEventListener('mouseleave', function() {
+            // Gestion mobile avec clic
+            if (window.innerWidth <= 768) {
+                dropdownLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Fermer tous les autres dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                            const otherMenu = otherDropdown.querySelector('.dropdown-menu');
+                            if (otherMenu) {
+                                otherMenu.style.display = 'none';
+                            }
+                        }
+                    });
+                    
+                    // Toggle du dropdown actuel
+                    dropdown.classList.toggle('active');
+                    if (dropdown.classList.contains('active')) {
+                        dropdownMenu.style.display = 'block';
+                    } else {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+            }
+        }
+    });
+
+    // Gestion du redimensionnement de la fenêtre
+    window.addEventListener('resize', function() {
+        // Réinitialiser les dropdowns lors du redimensionnement
+        dropdowns.forEach(dropdown => {
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+            if (dropdownMenu) {
+                dropdown.classList.remove('active');
                 dropdownMenu.style.display = 'none';
-            });
+            }
+        });
+        
+        // Fermer le menu mobile si on passe en desktop
+        if (window.innerWidth > 768) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
         }
     });
 
