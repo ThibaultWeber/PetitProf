@@ -132,6 +132,9 @@
             height: 30px !important;
             justify-content: center !important;
             align-items: center !important;
+            background: transparent !important;
+            border: none !important;
+            outline: none !important;
         }
         
         .hamburger .bar {
@@ -161,9 +164,26 @@
            ======================================== */
         
         @media (max-width: 768px) {
-            /* Hamburger visible sur mobile */
+            /* Hamburger visible sur mobile - PRIORITÉ MAXIMALE */
             .hamburger {
                 display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+                position: relative !important;
+                z-index: 1001 !important;
+            }
+            
+            /* Forcer la visibilité des barres du hamburger */
+            .hamburger .bar {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                background-color: #333 !important;
+                width: 25px !important;
+                height: 3px !important;
+                margin: 3px 0 !important;
+                border-radius: 2px !important;
             }
             
             /* Menu mobile - Override complet */
@@ -272,9 +292,24 @@
             .dropdown .nav-link {
                 display: flex !important;
                 align-items: center !important;
-                justify-content: space-between !important;
+                justify-content: center !important;
                 cursor: pointer !important;
                 text-align: center !important;
+                position: relative !important;
+            }
+            
+            /* Centrer le texte "Cours en ligne" */
+            .dropdown .nav-link span {
+                text-align: center !important;
+                flex: 1 !important;
+            }
+            
+            /* Positionner l'icône à droite */
+            .dropdown .nav-link i {
+                position: absolute !important;
+                right: 2rem !important;
+                font-size: 0.8rem !important;
+                transition: transform 0.3s ease !important;
             }
             
             .dropdown .nav-link i {
@@ -374,7 +409,7 @@
                     <a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
+                    <a href="cours-en-ligne-page.html" class="nav-link"><span>Cours en ligne</span> <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="outils-maths.html">Outils Mathématiques</a></li>
                         <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
