@@ -5,394 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petit Prof - Cours Particuliers et Ressources Pédagogiques</title>
     <meta name="description" content="Professeur de soutien pour tous. Cours particuliers, ressources pédagogiques et vidéos YouTube pour progresser en sciences.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Styles -->
     <link rel="stylesheet" href="static/css/consolidated.css">
     
-    <!-- Styles CSS critiques pour la navigation mobile -->
-    <style>
-        /* ========================================
-           NAVIGATION MOBILE - STYLES CRITIQUES
-           ======================================== */
-        
-        /* Reset complet pour éviter les conflits */
-        .navbar {
-            position: fixed !important;
-            top: 0 !important;
-            width: 100% !important;
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px) !important;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
-            z-index: 1000 !important;
-        }
-        
-        .nav-container {
-            max-width: 1200px !important;
-            margin: 0 auto !important;
-            padding: 0 20px !important;
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            height: 70px !important;
-        }
-        
-        .nav-logo h2 {
-            margin: 0 !important;
-            color: #2563eb !important;
-            font-size: 1.5rem !important;
-            font-weight: 700 !important;
-        }
-        
-        /* Menu de navigation de base */
-        .nav-menu {
-            display: flex !important;
-            list-style: none !important;
-            gap: 2rem !important;
-            align-items: center !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        
-        .nav-item {
-            margin: 0 !important;
-            list-style: none !important;
-        }
-        
-        .nav-link {
-            text-decoration: none !important;
-            color: #333 !important;
-            font-weight: 500 !important;
-            transition: color 0.3s ease !important;
-            padding: 0.5rem 1rem !important;
-            display: block !important;
-        }
-        
-        .nav-link:hover {
-            color: #2563eb !important;
-        }
-        
-        /* Dropdown de base */
-        .dropdown {
-            position: relative !important;
-        }
-        
-        .dropdown-menu {
-            display: none !important;
-            position: absolute !important;
-            top: 100% !important;
-            left: 0 !important;
-            background: white !important;
-            min-width: 250px !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
-            border-radius: 12px !important;
-            padding: 1rem 0 !important;
-            z-index: 1000 !important;
-            border: 1px solid rgba(0, 0, 0, 0.05) !important;
-            list-style: none !important;
-            margin: 0 !important;
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            display: block !important;
-        }
-        
-        .dropdown-menu li {
-            list-style: none !important;
-            margin: 0 !important;
-        }
-        
-        .dropdown-menu a {
-            display: block !important;
-            padding: 0.75rem 1.5rem !important;
-            color: #333 !important;
-            text-decoration: none !important;
-            transition: all 0.3s ease !important;
-            border-left: 3px solid transparent !important;
-        }
-        
-        .dropdown-menu a:hover {
-            background: rgba(59, 130, 246, 0.05) !important;
-            color: #3b82f6 !important;
-            border-left-color: #3b82f6 !important;
-            transform: translateX(5px) !important;
-        }
-        
-        /* ========================================
-           MENU HAMBURGER - STYLES DE BASE
-           ======================================== */
-        
-        .hamburger {
-            display: none !important;
-            flex-direction: column !important;
-            cursor: pointer !important;
-            padding: 10px !important;
-            z-index: 1001 !important;
-            position: relative !important;
-            width: 30px !important;
-            height: 30px !important;
-            justify-content: center !important;
-            align-items: center !important;
-            background: transparent !important;
-            border: none !important;
-            outline: none !important;
-        }
-        
-        .hamburger .bar {
-            width: 25px !important;
-            height: 3px !important;
-            background-color: #333 !important;
-            margin: 3px 0 !important;
-            transition: all 0.3s ease !important;
-            border-radius: 2px !important;
-            display: block !important;
-        }
-        
-        .hamburger.active .bar:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px) !important;
-        }
-        
-        .hamburger.active .bar:nth-child(2) {
-            opacity: 0 !important;
-        }
-        
-        .hamburger.active .bar:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px) !important;
-        }
-        
-        /* ========================================
-           STYLES MOBILE - PRIORITÉ MAXIMALE
-           ======================================== */
-        
-        @media (max-width: 768px) {
-            /* Hamburger visible sur mobile - PRIORITÉ MAXIMALE */
-            .hamburger {
-                display: flex !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-                pointer-events: auto !important;
-                position: relative !important;
-                z-index: 1001 !important;
-            }
-            
-            /* Forcer la visibilité des barres du hamburger */
-            .hamburger .bar {
-                display: block !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-                background-color: #333 !important;
-                width: 25px !important;
-                height: 3px !important;
-                margin: 3px 0 !important;
-                border-radius: 2px !important;
-            }
-            
-            /* Menu mobile - Override complet */
-            .nav-menu {
-                position: fixed !important;
-                top: 0 !important;
-                left: -100% !important;
-                width: 100% !important;
-                height: 100vh !important;
-                background-color: white !important;
-                flex-direction: column !important;
-                justify-content: flex-start !important;
-                align-items: center !important;
-                padding-top: 80px !important;
-                transition: left 0.3s ease !important;
-                z-index: 999 !important;
-                box-shadow: 2px 0 10px rgba(0,0,0,0.1) !important;
-                margin: 0 !important;
-                gap: 0 !important;
-                overflow-y: auto !important;
-            }
-            
-            .nav-menu.active {
-                left: 0 !important;
-            }
-            
-            /* Items du menu mobile */
-            .nav-item {
-                margin: 0 !important;
-                width: 100% !important;
-                text-align: center !important;
-                border-bottom: 1px solid #f0f0f0 !important;
-            }
-            
-            .nav-item:last-child {
-                border-bottom: none !important;
-            }
-            
-            .nav-link {
-                display: block !important;
-                padding: 1.5rem 2rem !important;
-                font-size: 1.2rem !important;
-                color: #333 !important;
-                text-decoration: none !important;
-                transition: background-color 0.3s ease !important;
-                font-weight: 500 !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-            }
-            
-            .nav-link:hover {
-                background-color: #f8f9fa !important;
-                color: #2563eb !important;
-            }
-            
-            /* Dropdown mobile */
-            .dropdown-menu {
-                position: static !important;
-                display: none !important;
-                background: #f8fafc !important;
-                box-shadow: none !important;
-                border: none !important;
-                padding: 0 !important;
-                min-width: auto !important;
-                width: 100% !important;
-                margin: 0 !important;
-                border-radius: 0 !important;
-                max-height: 0 !important;
-                overflow: hidden !important;
-                transition: max-height 0.3s ease !important;
-            }
-            
-            .dropdown.active .dropdown-menu {
-                display: block !important;
-                max-height: 500px !important;
-                padding: 0.5rem 0 !important;
-            }
-            
-            .dropdown-menu li {
-                margin: 0 !important;
-                border-bottom: 1px solid #e5e7eb !important;
-            }
-            
-            .dropdown-menu li:last-child {
-                border-bottom: none !important;
-            }
-            
-            .dropdown-menu a {
-                padding: 1rem 3rem !important;
-                color: #666 !important;
-                border-left: none !important;
-                font-size: 1rem !important;
-                display: block !important;
-                text-decoration: none !important;
-                transition: background-color 0.3s ease !important;
-                text-align: left !important;
-            }
-            
-            .dropdown-menu a:hover {
-                background-color: rgba(59, 130, 246, 0.1) !important;
-                color: #3b82f6 !important;
-                transform: none !important;
-            }
-            
-            /* Lien dropdown principal */
-            .dropdown .nav-link {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                cursor: pointer !important;
-                text-align: center !important;
-                position: relative !important;
-            }
-            
-            /* Centrer le texte "Cours en ligne" */
-            .dropdown .nav-link span {
-                text-align: center !important;
-                flex: 1 !important;
-            }
-            
-            /* Positionner l'icône à droite */
-            .dropdown .nav-link i {
-                position: absolute !important;
-                right: 2rem !important;
-                font-size: 0.8rem !important;
-                transition: transform 0.3s ease !important;
-            }
-            
-            .dropdown .nav-link i {
-                font-size: 0.8rem !important;
-                transition: transform 0.3s ease !important;
-                margin-left: 0.5rem !important;
-            }
-            
-            .dropdown.active .nav-link i {
-                transform: rotate(180deg) !important;
-            }
-        }
-        
-        /* ========================================
-           STYLES DESKTOP - HAMBURGER MASQUÉ
-           ======================================== */
-        
-        @media (min-width: 769px) {
-            .hamburger {
-                display: none !important;
-            }
-            
-            .nav-menu {
-                display: flex !important;
-                position: static !important;
-                width: auto !important;
-                height: auto !important;
-                background: none !important;
-                flex-direction: row !important;
-                padding: 0 !important;
-                box-shadow: none !important;
-                margin: 0 !important;
-                gap: 2rem !important;
-                overflow: visible !important;
-            }
-            
-            .nav-item {
-                margin: 0 !important;
-                width: auto !important;
-                text-align: left !important;
-                border-bottom: none !important;
-            }
-            
-            .nav-link {
-                padding: 0.5rem 1rem !important;
-                font-size: 1rem !important;
-                width: auto !important;
-                text-align: left !important;
-            }
-            
-            .dropdown-menu {
-                position: absolute !important;
-                display: none !important;
-                background: white !important;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
-                border: 1px solid rgba(0, 0, 0, 0.05) !important;
-                min-width: 250px !important;
-                width: auto !important;
-                margin: 0 !important;
-                border-radius: 12px !important;
-                max-height: none !important;
-                overflow: visible !important;
-                padding: 1rem 0 !important;
-            }
-            
-            .dropdown:hover .dropdown-menu {
-                display: block !important;
-            }
-            
-            .dropdown-menu li {
-                border-bottom: none !important;
-            }
-            
-            .dropdown-menu a {
-                padding: 0.75rem 1.5rem !important;
-                text-align: left !important;
-            }
-            
-            .dropdown .nav-link {
-                text-align: left !important;
-            }
-        }
-    </style>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -403,13 +23,13 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#accueil" class="nav-link">Accueil</a>
+                    <a href="index.html" class="nav-link active">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="cours-en-ligne-page.html" class="nav-link"><span>Cours en ligne</span> <i class="fas fa-chevron-down"></i></a>
+                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="outils-maths.html">Outils Mathématiques</a></li>
                         <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
@@ -438,6 +58,9 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
+                <div class="close-icon">
+                    <i class="fas fa-times"></i>
+                </div>
             </div>
         </div>
     </nav>
@@ -449,7 +72,7 @@
                 <h1 class="hero-title">BIENVENUE SUR LE SITE DE PETIT PROF</h1>
                 <h2 class="hero-subtitle">Un Professeur de soutien pour tous</h2>
                 <br>
-                <h2 class="hero-subtitle">A Strasbourg et en visio</h2>
+                <h2 class="hero-subtitle">À Strasbourg et en visio</h2>
                 <br>
                 <p class="hero-description">
                     Apprentissage, Méthode, Progrès.
@@ -469,13 +92,13 @@
             <div class="presentation-content">
                 <div class="presentation-text">
                     <p>
-                        L'objectif de ce site est de présenter à la fois les contenus pédagogiques que j'utilise en classe avec mes élèves et de les partager aux élèves curieux qui font des recherches en ligne.
+                        L'objectif de ce site est double : présenter les contenus pédagogiques que j'utilise en classe avec mes élèves, et les mettre à disposition de tous ceux qui, par curiosité, cherchent à en apprendre davantage en ligne.
                     </p>
                     <p>
-                        Ma volonté de partager les sciences dans leur ensemble à un public le plus large possible m'a vite fait me tourner vers la réalisation de vidéos pédagogiques sur ma chaîne YouTube qui est présentée sur ce site.
+                        Afin de partager les sciences avec le plus grand nombre, j'ai rapidement élargi mon approche en créant des vidéos pédagogiques sur ma chaîne YouTube, également accessible depuis ce site.
                     </p>
                     <p>
-                        Enfin, ce site me sert aussi de support de présentation et de promotion pour mon activité de professeur particulier en ligne ou en présentiel.
+                        Enfin, ce site constitue aussi une vitrine pour mon activité de professeur particulier, que je propose aussi bien en ligne qu'en présentiel.
                     </p>
                 </div>
                 <div class="presentation-image">
@@ -517,71 +140,72 @@
     <section id="cours-en-ligne" class="cours-en-ligne">
         <div class="container">
             <h2 class="section-title">COURS EN LIGNE</h2>
+            <p class="section-subtitle">Ressources pédagogiques gratuites pour tous les niveaux</p>
             <div class="niveaux-grid">
                 <a href="outils-maths.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>Outils Mathématiques</h3>
+                        <h3>🔧 Outils Mathématiques</h3>
                         <p>Ressources et outils pour faciliter l'apprentissage des mathématiques</p>
                     </div>
                 </a>
                 <a href="fiches-methodes.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>Fiches Méthodes</h3>
+                        <h3>📋 Fiches Méthodes</h3>
                         <p>Méthodes et techniques pour réussir en sciences</p>
                     </div>
                 </a>
                 <a href="seconde.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>Seconde</h3>
+                        <h3>📚 Seconde</h3>
                         <p>Cours et exercices niveau Seconde</p>
                     </div>
                 </a>
                 <a href="premiere-es.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>1ère ES</h3>
+                        <h3>📊 1ère ES</h3>
                         <p>Programme de Première ES</p>
                     </div>
                 </a>
                 <a href="terminale-es.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>Terminale ES</h3>
+                        <h3>📈 Terminale ES</h3>
                         <p>Programme de Terminale ES</p>
                     </div>
                 </a>
                 <a href="premiere-sti2d.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>1ère STI2D</h3>
+                        <h3>⚙️ 1ère STI2D</h3>
                         <p>Programme de Première STI2D</p>
                     </div>
                 </a>
                 <a href="terminale-sti2d.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>Terminale STI2D</h3>
+                        <h3>🔬 Terminale STI2D</h3>
                         <p>Programme de Terminale STI2D</p>
                     </div>
                 </a>
                 <a href="premiere-physique.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>1ère Spécialité Physique-Chimie</h3>
+                        <h3>⚗️ 1ère Spécialité Physique-Chimie</h3>
                         <p>Programme de Première Spécialité Physique-Chimie</p>
                     </div>
                 </a>
                 <a href="terminale-physique.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>Terminale Spécialité Physique-Chimie</h3>
+                        <h3>🧪 Terminale Spécialité Physique-Chimie</h3>
                         <p>Programme de Terminale Spécialité Physique-Chimie</p>
                     </div>
                 </a>
                 <a href="capes.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>CAPES Physique-Chimie</h3>
-                        <p>Préparation au concours CAPES Physique-Chimie</p>
+                        <h3>🎓 CAPES</h3>
+                        <p>Préparation au concours d'enseignement</p>
                     </div>
                 </a>
                 <a href="classe-preparatoire.html" class="niveau-card-link">
                     <div class="niveau-card">
-                        <h3>Classe Préparatoire</h3>
-                        <p>Préparation aux Grandes Écoles (CPGE)</p>
+                        <h3>🚀 Classe préparatoire</h3>
+                        <p>Mathématiques et physique pour prépa</p>
                     </div>
                 </a>
             </div>
@@ -595,7 +219,7 @@
                 <div class="youtube-content">
                     <h2 class="section-title">CHAÎNE YOUTUBE PETIT PROF</h2>
                     <p class="section-subtitle">
-                        Voici la partie du site qui présente le travail que je réalise sur des vidéos pédagogiques publiées sur la chaîne YouTube : PetitProf
+                        Voici la partie du site qui présente le travail que je réalise sur des vidéos pédagogiques publiées sur la chaîne YouTube : <strong>PetitProf</strong>
                     </p>
                 </div>
                 <div class="youtube-image">
@@ -603,7 +227,7 @@
                 </div>
             </div>
             <p class="youtube-note">
-                Tout like, commentaire et abonnement est d'une grande aide pour faire grandir la chaîne.
+                💡 <strong>Conseil :</strong> Tout like, commentaire et abonnement est d'une grande aide pour faire grandir la chaîne !
             </p>
             
             <div class="videos-grid">
@@ -725,7 +349,7 @@
                 <div class="footer-section">
                     <h4>Suivez-moi</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/@PetitProf67" class="social-link" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -739,5 +363,5 @@
 
     <script src="static/js/script.js"></script>
     <script src="static/js/mobile-nav.js"></script>
-    </body>
+</body>
 </html>
