@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe préparatoire - Petit Prof</title>
+    <meta name="description" content="Ressources et accompagnement pour les classes préparatoires scientifiques.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="static/css/consolidated.css">
+
+    
+    <style>
+        /* Variables CSS pour le thème */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-primary: #3b3b5c;
+            --text-secondary: #444;
+            --text-muted: #666;
+            --border-color: #eee;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --header-bg: rgba(255, 255, 255, 0.9);
+            --nav-bg: #ffffff;
+            --footer-bg: #f8f9fa;
+        }
+
+        /* Styles de base */
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Header - mode clair par défaut */
+        .course-header {
+            position: relative;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Sections principales */
+        .main-content {
+            background-color: var(--bg-primary);
+        }
+
+        /* Styles pour les icônes PDF des ressources (exactement comme sur les autres pages) */
+        .resource-icon {
+            width: 48px;
+            height: 48px;
+            position: relative;
+        }
+
+        .resource-icon .pdf-icon {
+            width: 100% !important;
+            height: 100% !important;
+            background: linear-gradient(135deg, #dc2626, #991b1b) !important;
+            border-radius: 8px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3) !important;
+        }
+
+        .resource-icon .pdf-icon::before {
+            content: 'PDF' !important;
+            color: white !important;
+            font-weight: 700 !important;
+            font-size: 0.9rem !important;
+            letter-spacing: 1px !important;
+        }
+
+        .resource-icon .pdf-icon::after {
+            content: '' !important;
+            position: absolute !important;
+            top: -3px !important;
+            right: -3px !important;
+            width: 15px !important;
+            height: 15px !important;
+            background: white !important;
+            border-radius: 0 8px 0 8px !important;
+            border-left: 2px solid #dc2626 !important;
+            border-bottom: 2px solid #dc2626 !important;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>📚 Petit Prof</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a></li>
+                <li class="nav-item dropdown">
+                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="outils-maths.html">Outils Mathématiques</a></li>
+                        <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
+                        <li><a href="seconde.html">Seconde</a></li>
+                        <li><a href="premiere-es.html">1ère ES</a></li>
+                        <li><a href="terminale-es.html">Terminale ES</a></li>
+                        <li><a href="premiere-sti2d.html">1ère STI2D</a></li>
+                        <li><a href="terminale-sti2d.html">Terminale STI2D</a></li>
+                        <li><a href="premiere-physique.html">1ère Spécialité Physique-Chimie</a></li>
+                        <li><a href="terminale-physique.html">Terminale Spécialité Physique-Chimie</a></li>
+                        <li><a href="capes.html">CAPES</a></li>
+                        <li><a href="classe-preparatoire.html">Classe préparatoire</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="youtube-page.html" class="nav-link">Chaîne YouTube</a></li>
+                <li class="nav-item"><a href="calculatrice-graphique.html" class="nav-link">Calculatrice Graphique</a></li>
+                <li class="nav-item"><a href="contact-page.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <div class="close-icon">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="course-header" style="background-image: url('static/images/hero-math.avif');">
+        <div class="container">
+            <h1>Classe préparatoire</h1>
+            <p>Ressources, exercices et accompagnement pour les classes préparatoires scientifiques</p>
+        </div>
+    </header>
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Accueil</a> > 
+            <a href="index.html#cours-en-ligne">Cours en ligne</a> > 
+            <span>Classe préparatoire</span>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="">
+        <div class="container">
+            <section class="outils-maths-section" style="margin-top: 32px; margin-bottom: 32px;">
+                <h2 style="font-size: 1.7rem; color: #3b3b5c; margin-bottom: 20px;">Outils Mathématiques</h2>
+                <p style="font-size: 1.13rem; color: #444; max-width: 700px; margin-bottom: 30px; line-height: 1.6;">
+                    En classe préparatoire, la maîtrise des outils mathématiques est fondamentale pour réussir en physique et chimie. Les concepts mathématiques deviennent des outils puissants pour modéliser les phénomènes physiques, résoudre des équations différentielles complexes, et analyser des données expérimentales. Cette section regroupe les ressources essentielles pour consolider vos bases mathématiques et les appliquer efficacement dans vos études scientifiques.
+                </p>
+                
+                <div class="pdf-icons-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                    <div class="pdf-icon" style="text-align: center; padding: 20px; background: linear-gradient(145deg, #f8fffe, #e8f8f5); border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.8); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #10b981, #059669);"></div>
+                        <a href="static/documents/outils-maths-cp-1.pdf" download style="text-decoration: none; color: inherit; display: block;">
+                            <div style="font-size: 2.2rem; margin-bottom: 12px; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">📐</div>
+                            <h3 style="font-size: 1.1rem; color: #1f2937; margin-bottom: 8px; font-weight: 600;">Trigonometrie</h3>
+                            <p style="font-size: 0.9rem; color: #6b7280; margin: 0; line-height: 1.4;">Relations trigonométriques et applications</p>
+                        </a>
+                    </div>
+                    
+                    <div class="pdf-icon" style="text-align: center; padding: 20px; background: linear-gradient(145deg, #f0f9ff, #e0f2fe); border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.8); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #3b82f6, #2563eb);"></div>
+                        <a href="static/documents/outils-maths-cp-2.pdf" download style="text-decoration: none; color: inherit; display: block;">
+                            <div style="font-size: 2.2rem; margin-bottom: 12px; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">📈</div>
+                            <h3 style="font-size: 1.1rem; color: #1f2937; margin-bottom: 8px; font-weight: 600;">Équations différentielles</h3>
+                            <p style="font-size: 0.9rem; color: #6b7280; margin: 0; line-height: 1.4;">Résolution et applications physiques</p>
+                        </a>
+                    </div>
+                    
+                    <div class="pdf-icon" style="text-align: center; padding: 20px; background: linear-gradient(145deg, #fef7ff, #f3e8ff); border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.8); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #8b5cf6, #7c3aed);"></div>
+                        <a href="static/documents/outils-maths-cp-3.pdf" download style="text-decoration: none; color: inherit; display: block;">
+                            <div style="font-size: 2.2rem; margin-bottom: 12px; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">📊</div>
+                            <h3 style="font-size: 1.1rem; color: #1f2937; margin-bottom: 8px; font-weight: 600;">Analyse vectorielle</h3>
+                            <p style="font-size: 0.9rem; color: #6b7280; margin: 0; line-height: 1.4;">Vecteurs, produits scalaire et vectoriel</p>
+                        </a>
+                    </div>
+                    
+                    <div class="pdf-icon" style="text-align: center; padding: 20px; background: linear-gradient(145deg, #fff7ed, #ffedd5); border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.8); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #f59e0b, #d97706);"></div>
+                        <a href="static/documents/outils-maths-cp-4.pdf" download style="text-decoration: none; color: inherit; display: block;">
+                            <div style="font-size: 2.2rem; margin-bottom: 12px; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">⚡</div>
+                            <h3 style="font-size: 1.1rem; color: #1f2937; margin-bottom: 8px; font-weight: 600;">Opérateurs différentiels</h3>
+                            <p style="font-size: 0.9rem; color: #6b7280; margin: 0; line-height: 1.4;">Gradient, divergence, rotationnel</p>
+                        </a>
+                    </div>
+                    
+                    <div class="pdf-icon" style="text-align: center; padding: 20px; background: linear-gradient(145deg, #f0fdf4, #dcfce7); border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.8); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #10b981, #059669);"></div>
+                        <a href="static/documents/outils-maths-cp-5.pdf" download style="text-decoration: none; color: inherit; display: block;">
+                            <div style="font-size: 2.2rem; margin-bottom: 12px; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">📚</div>
+                            <h3 style="font-size: 1.1rem; color: #1f2937; margin-bottom: 8px; font-weight: 600;">Formulaire global</h3>
+                            <p style="font-size: 0.9rem; color: #6b7280; margin: 0; line-height: 1.4;">Récapitulatif des formules essentielles</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section Physique -->
+            <section class="theme-section" style="margin-top: 32px; margin-bottom: 32px;">
+                <h2 class="theme-title" style="font-size: 1.7rem; color: #3b3b5c; margin-bottom: 20px;">
+                    <i class="fas fa-atom"></i>
+                    Physique
+                </h2>
+                <p style="font-size: 1.13rem; color: #444; max-width: 700px; margin-bottom: 30px; line-height: 1.6;">
+                    La physique en classe préparatoire explore les phénomènes naturels à travers des modèles mathématiques rigoureux. Cette section couvre les concepts fondamentaux de mécanique, électromagnétisme, thermodynamique et optique, essentiels pour comprendre le monde qui nous entoure et préparer les concours d'entrée aux grandes écoles.
+                </p>
+                
+                <div class="chapters-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                                              <!-- Mécanique -->
+                     <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                         <div class="chapter-header" style="background: linear-gradient(135deg, #fff0e6, #ffe6d1); padding: 20px; border-bottom: 1px solid #eee;">
+                             <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">🌌 Mécanique</h3>
+                             <span class="chapter-badge" style="background: #ff6b35; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Mécanique</span>
+                         </div>
+                         <div class="chapter-content" style="padding: 20px;">
+                             <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                                                                                    <a href="static/documents/prepa/Électrocinétique en régime continu et mécanique du point matériel.pdf" download class="resource-item">
+                                     <div class="resource-icon">
+                                         <div class="pdf-icon"></div>
+                                     </div>
+                                     <span class="resource-title">Mécanique du point matériel</span>
+                                 </a>
+                             </div>
+                         </div>
+                     </div>
+
+                    <!-- Électromagnétisme -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #fff0e6, #ffe6d1); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">⚡ Électromagnétisme</h3>
+                            <span class="chapter-badge" style="background: #ff6b35; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Électro</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="static/documents/prepa/Électrocinétique en régime continu et mécanique du point matériel.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Électrocinétique en régime continu</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thermodynamique -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #fff0e6, #ffe6d1); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">🔥 Thermodynamique</h3>
+                            <span class="chapter-badge" style="background: #ff6b35; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Thermo</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="static/documents/prepa/Thermodynamique/1-Bases.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon">
+                                        <div class="pdf-icon"></div>
+                                    </div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Bases de la thermodynamique</span>
+                                </a>
+                                <a href="static/documents/prepa/Thermodynamique/4-Diffusion-thermique.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon">
+                                        <div class="pdf-icon"></div>
+                                    </div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Diffusion thermique</span>
+                                </a>
+                                <a href="static/documents/prepa/Thermodynamique/5-Rayonnement-thermique.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon">
+                                        <div class="pdf-icon"></div>
+                                    </div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Rayonnement thermique</span>
+                                </a>
+                                <a href="static/documents/prepa/Thermodynamique/6-Physique-statistique.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Physique statistique</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optique -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #fff0e6, #ffe6d1); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">🔍 Optique</h3>
+                            <span class="chapter-badge" style="background: #ff6b35; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Optique</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="static/documents/prepa/1-Optique-géométrique.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon">
+                                        <div class="pdf-icon"></div>
+                                    </div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Optique géométrique</span>
+                                </a>
+                                <a href="static/documents/prepa/2-Optique-ondulatoire.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Optique ondulatoire</span>
+                                </a>
+                                <a href="static/documents/prepa/3-Optique-physique.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Optique physique</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Electrocinétique -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #fff0e6, #ffe6d1); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">⚡ Electrocinétique</h3>
+                            <span class="chapter-badge" style="background: #ff6b35; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Électro</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="static/documents/prepa/Électrocinétique en régime continu et mécanique du point matériel.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Électrocinétique en régime continu</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mécanique des fluides -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #fff0e6, #ffe6d1); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">🌊 Mécanique des fluides</h3>
+                            <span class="chapter-badge" style="background: #ff6b35; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Fluides</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="#" class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Mécanique des fluides (à venir)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section Chimie -->
+            <section class="theme-section" style="margin-top: 32px; margin-bottom: 32px;">
+                <h2 class="theme-title" style="font-size: 1.7rem; color: #3b3b5c; margin-bottom: 20px;">
+                    <i class="fas fa-flask"></i>
+                    Chimie
+                </h2>
+                <p style="font-size: 1.13rem; color: #444; max-width: 700px; margin-bottom: 30px; line-height: 1.6;">
+                    La chimie en classe préparatoire combine théorie et pratique pour comprendre la matière et ses transformations. Cette section aborde la thermochimie, la cinétique chimique, l'électrochimie et la chimie organique, formant la base solide nécessaire pour les études supérieures en sciences.
+                </p>
+                
+                <div class="chapters-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <!-- Thermochimie -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #e6f3ff, #d1e7ff); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">⚗️ Thermochimie</h3>
+                            <span class="chapter-badge" style="background: #3498db; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Thermo</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="static/documents/prepa/Thermodynamique/2-Thermochimie.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Thermochimie</span>
+                                </a>
+                                <a href="static/documents/prepa/Thermodynamique/3-Potentiels-thermodynamique.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Potentiels thermodynamiques</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cinétique chimique -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #e6f3ff, #d1e7ff); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">⏱️ Cinétique chimique</h3>
+                            <span class="chapter-badge" style="background: #3498db; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Cinétique</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="#" class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Cinétique chimique (à venir)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Électrochimie -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #e6f3ff, #d1e7ff); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">🔋 Électrochimie</h3>
+                            <span class="chapter-badge" style="background: #3498db; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Électro</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="#" class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Électrochimie (à venir)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chimie organique -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #e6f3ff, #d1e7ff); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">🧪 Chimie organique</h3>
+                            <span class="chapter-badge" style="background: #3498db; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Organique</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="static/documents/prepa/Chimie-Organique-partie1.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Chimie organique - Partie 1</span>
+                                </a>
+                                <a href="static/documents/prepa/Chimie-Organique-partie2.pdf" download class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Chimie organique - Partie 2</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chimie des solutions -->
+                    <div class="chapter-card" style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                        <div class="chapter-header" style="background: linear-gradient(135deg, #e6f3ff, #d1e7ff); padding: 20px; border-bottom: 1px solid #eee;">
+                            <h3 style="margin: 0; font-size: 1.1rem; color: #3b3b5c;">💧 Chimie des solutions</h3>
+                            <span class="chapter-badge" style="background: #3498db; color: white; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Solutions</span>
+                        </div>
+                        <div class="chapter-content" style="padding: 20px;">
+                            <div class="chapter-resources" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                                <a href="#" class="resource-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s;">
+                                    <div class="resource-icon"><div class="pdf-icon"></div></div>
+                                    <span class="resource-title" style="font-size: 0.9rem; color: #3b3b5c;">Chimie des solutions (à venir)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Petit Prof</h3>
+                    <p>Votre partenaire pour la réussite en mathématiques et sciences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="cours-particuliers-page.html">Cours Particuliers</a></li>
+                        <li><a href="cours-en-ligne-page.html">Cours en Ligne</a></li>
+                        <li><a href="youtube-page.html">Chaîne YouTube</a></li>
+                        <li><a href="contact-page.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 t.weber.ac@gmail.com</p>
+                    <p>📱 07 45 10 66 71</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Petit Prof. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="static/js/script.js"></script>
+    </body>
+</html>
+

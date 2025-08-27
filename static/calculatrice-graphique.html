@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Graphique - Petit Prof</title>
+    <meta name="description" content="Outils et tutoriels pour la calculatrice graphique.">
+    <!-- Styles -->
+    <link rel="stylesheet" href="static/css/cours-particuliers.css">
+<link rel="stylesheet" href="static/css/consolidated.css">
+<!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+.graph-calc-section {
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #e0e7ef;
+    padding: 32px 24px;
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+}
+.graph-calc-section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #3b3b5c;
+    text-align: center;
+}
+.graph-calc-section p {
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0.5rem;
+}
+#graph-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* réduit l'espacement entre tous les éléments du formulaire */
+    align-items: stretch;
+}
+#graph-form label {
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 0px; /* supprime l'espacement sous le label */
+}
+#graph-form input[type="text"],
+#graph-form input[type="number"] {
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 7px 10px; /* réduit la hauteur des champs */
+    font-size: 1rem;
+    background: #fff;
+    transition: border 0.2s;
+    margin-bottom: 0;
+    box-shadow: 0 1px 2px #e0e7ef33;
+}
+#graph-form input[type="text"]:focus,
+#graph-form input[type="number"]:focus {
+    border: 1.5px solid #6366f1;
+    outline: none;
+}
+#graph-form fieldset {
+    border-radius: 8px;
+    border: 1.5px solid #cbd5e1;
+    background: #f1f5f9;
+    margin-bottom: 6px; /* réduit l'espacement sous le fieldset */
+    padding: 8px 8px 4px 8px; /* réduit l'intérieur */
+}
+#graph-form legend {
+    font-size: 1.05rem;
+    color: #6366f1;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+#tracer-btn {
+    background: linear-gradient(90deg, #6366f1, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0; /* réduit la hauteur du bouton */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+    box-shadow: 0 2px 8px #c7d2fe55;
+    transition: background 0.2s;
+}
+#tracer-btn:hover {
+    background: linear-gradient(90deg, #764ba2, #6366f1);
+}
+#graph-result img {
+    border-radius: 12px;
+    margin-top: 0;
+    box-shadow: 0 4px 16px #c7d2fe55;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#graph-form input[type="text"] {
+    margin-bottom: 2px !important; /* réduit l'espace sous chaque champ de fonction */
+}
+#graph-form label {
+    margin-bottom: 0px !important;
+}
+#graph-form label {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    line-height: 1.1;
+}
+#graph-form input[type="text"] {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#graph-form br {
+    display: none;
+}
+#graph-form label {
+    margin-bottom: 2px !important;
+    margin-top: 0 !important;
+    line-height: 1.2;
+}
+#graph-form input[type="text"] {
+    margin-bottom: 6px !important;
+    margin-top: 0 !important;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+#graph-form br {
+    display: inline;
+}
+#graph-form label {
+    margin-bottom: 1px !important;
+    margin-top: 0 !important;
+    line-height: 1.15;
+}
+#graph-form input[type="text"] {
+    margin-bottom: 3px !important;
+    margin-top: 0 !important;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+#graph-form br {
+    display: inline;
+}
+.analyse-math-block {
+    background: #f1f5fa;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #e0e7ef55;
+    padding: 28px 24px 18px 24px;
+    margin: 36px auto 0 auto;
+    max-width: 900px;
+    color: #1e293b;
+    font-size: 1.08rem;
+}
+.analyse-math-block h3 {
+    color: #6366f1;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 18px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.analyse-fonction {
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e7ef;
+}
+.analyse-fonction:last-child {
+    border-bottom: none;
+}
+.analyse-fonction ul {
+    margin: 8px 0 0 0;
+    padding-left: 18px;
+}
+.analyse-fonction li {
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+.analyse-fonction b {
+    color: #3b3b5c;
+}
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>📚 Petit Prof</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a></li>
+                <li class="nav-item dropdown">
+                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="outils-maths.html">Outils Mathématiques</a></li>
+                        <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
+                        <li><a href="seconde.html">Seconde</a></li>
+                        <li><a href="premiere-es.html">1ère ES</a></li>
+                        <li><a href="terminale-es.html">Terminale ES</a></li>
+                        <li><a href="premiere-sti2d.html">1ère STI2D</a></li>
+                        <li><a href="terminale-sti2d.html">Terminale STI2D</a></li>
+                        <li><a href="premiere-physique.html">1ère Spécialité Physique-Chimie</a></li>
+                        <li><a href="terminale-physique.html">Terminale Spécialité Physique-Chimie</a></li>
+                        <li><a href="capes.html">CAPES</a></li>
+                        <li><a href="classe-preparatoire.html">Classe préparatoire</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="youtube-page.html" class="nav-link">Chaîne YouTube</a></li>
+                <li class="nav-item"><a href="calculatrice-graphique.html" class="nav-link active">Calculatrice Graphique</a></li>
+                <li class="nav-item"><a href="contact-page.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <div class="close-icon">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de la page -->
+    <header class="page-header cours-particuliers-header" style="background-image: url('static/images/hero-math.avif');">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1 class="page-title">CALCULATRICE GRAPHIQUE</h1>
+                    <p class="page-subtitle">Outils et tutoriels pour la calculatrice graphique</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page vierge -->
+    <main class="">
+        <div class="container">
+            <div class="graph-calc-section">
+                <h2>Calculatrice graphique :</h2>
+                <p>Indique la ou les fonctions dont tu souhaites le tracé et les informations.</p>
+                <form id="graph-form">
+                    <label for="fonction1">Fonction 1 : y =</label>
+                    <input type="text" id="fonction1" name="fonction1" placeholder="ex: x^2 + 3*x - 1" required style="width: 300px; margin-left: 5px;"><br><br>
+                    <label for="fonction2">Fonction 2 : y =</label>
+                    <input type="text" id="fonction2" name="fonction2" placeholder="optionnelle" style="width: 300px; margin-left: 5px;"><br><br>
+                    <label for="fonction3">Fonction 3 : y =</label>
+                    <input type="text" id="fonction3" name="fonction3" placeholder="optionnelle" style="width: 300px; margin-left: 5px;"><br><br>
+                    <label for="fonction4">Fonction 4 : y =</label>
+                    <input type="text" id="fonction4" name="fonction4" placeholder="optionnelle" style="width: 300px; margin-left: 5px;"><br><br>
+                    <label for="fonction5">Fonction 5 : y =</label>
+                    <input type="text" id="fonction5" name="fonction5" placeholder="optionnelle" style="width: 300px; margin-left: 5px;"><br><br>
+                    <fieldset style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+                        <legend>Fenêtre d'affichage (optionnel)</legend>
+                        <label for="x_min">x min :</label>
+                        <input type="number" id="x_min" name="x_min" step="any" placeholder="-10" style="width:80px; margin-right:10px;">
+                        <label for="x_max">x max :</label>
+                        <input type="number" id="x_max" name="x_max" step="any" placeholder="10" style="width:80px; margin-right:10px;">
+                        <label for="y_min">y min :</label>
+                        <input type="number" id="y_min" name="y_min" step="any" placeholder="auto" style="width:80px; margin-right:10px;">
+                        <label for="y_max">y max :</label>
+                        <input type="number" id="y_max" name="y_max" step="any" placeholder="auto" style="width:80px;">
+                    </fieldset>
+                    <button type="submit" id="tracer-btn">TRACER</button>
+                </form>
+            </div>
+            <div id="graph-result" style="margin: 40px auto 0 auto; text-align: center; max-width: 900px; width: 100%;"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Petit Prof</h3>
+                    <p>Votre partenaire pour la réussite en mathématiques et sciences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="cours-particuliers-page.html">Cours Particuliers</a></li>
+                        <li><a href="cours-en-ligne-page.html">Cours en Ligne</a></li>
+                        <li><a href="youtube-page.html">Chaîne YouTube</a></li>
+                        <li><a href="calculatrice-graphique.html">Calculatrice Graphique</a></li>
+                        <li><a href="contact-page.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 t.weber.ac@gmail.com</p>
+                    <p>📱 07 45 10 66 71</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Petit Prof. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="static/js/script.js"></script>
+    <script src="static/js/calculatrice-graphique.js"></script></body>
+</html>
