@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: petit-prof-site
+    env: static
+    buildCommand: |
+      echo "🚀 Démarrage du build pour Render..."
+      echo "📁 Vérification de la structure des fichiers..."
+      ls -la
+      echo "✅ Build terminé !"
+    startCommand: echo "Site statique déployé avec succès"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: "public, max-age=31536000"
+      - path: /*.css
+        name: Content-Type
+        value: "text/css"
+      - path: /*.js
+        name: Content-Type
+        value: "application/javascript"
+      - path: /*.png
+        name: Content-Type
+        value: "image/png"
+      - path: /*.jpg
+        name: Content-Type
+        value: "image/jpeg"
+      - path: /*.webp
+        name: Content-Type
+        value: "image/webp"
+      - path: /*.avif
+        name: Content-Type
+        value: "image/avif"

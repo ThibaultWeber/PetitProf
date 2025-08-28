@@ -2,10 +2,32 @@ services:
   - type: web
     name: petit-prof-site
     env: static
-    buildCommand: echo "Site statique - pas de build nécessaire"
+    buildCommand: chmod +x render-build.sh && ./render-build.sh
     startCommand: echo "Site statique déployé avec succès"
     staticPublishPath: .
     routes:
       - type: rewrite
         source: /*
         destination: /index.html
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: "public, max-age=31536000"
+      - path: /*.css
+        name: Cache-Control
+        value: "public, max-age=31536000"
+      - path: /*.js
+        name: Cache-Control
+        value: "public, max-age=31536000"
+      - path: /*.png
+        name: Cache-Control
+        value: "public, max-age=31536000"
+      - path: /*.jpg
+        name: Cache-Control
+        value: "public, max-age=31536000"
+      - path: /*.webp
+        name: Cache-Control
+        value: "public, max-age=31536000"
+      - path: /*.avif
+        name: Cache-Control
+        value: "public, max-age=31536000"
