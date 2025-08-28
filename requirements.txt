@@ -3,3 +3,4 @@ gunicorn
 matplotlib
 numpy
 sympy
+gunicorn==21.2.0
