@@ -1,0 +1,15 @@
+# Redirections pour le site Petit Prof
+# Gestion des routes SPA
+
+# Redirection de la racine vers index.html
+/ /index.html 200
+
+# Redirection des pages principales
+/cours-particuliers /cours-particuliers-page.html 200
+/cours-en-ligne /cours-en-ligne-page.html 200
+/calculatrice /calculatrice-graphique.html 200
+/youtube /youtube-page.html 200
+/contact /contact-page.html 200
+
+# Gestion des erreurs 404
+/* /index.html 200

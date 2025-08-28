@@ -44,8 +44,8 @@ Site web pédagogique 100% frontend pour les cours de mathématiques et sciences
 
 ### **Outils de Développement**
 - **Git** : Versioning
-- **GitHub Actions** : Déploiement automatique
-- **GitHub Pages** : Hébergement gratuit
+- **GitHub** : Hébergement du code source
+- **Render** : Déploiement et hébergement du site
 
 ## 📁 **Structure du Projet**
 
@@ -64,16 +64,30 @@ PetitProf/
 ├── 📚 Documents/ (132 PDFs)
 ├── 📊 Graph/ (graphiques)
 └── 🔧 Configuration/
-    ├── .github/workflows/ (GitHub Actions)
+    ├── render.yaml (configuration Render)
+    ├── _redirects (redirections)
+    ├── package.json (métadonnées)
     └── .gitignore
 ```
 
 ## 🌐 **Déploiement**
 
-### **GitHub Pages**
-Le site est automatiquement déployé sur GitHub Pages à chaque push sur la branche `main`.
+### **Render (Recommandé)**
+Le site est configuré pour être déployé sur Render, une plateforme moderne et fiable.
 
-**URL de déploiement :** `https://thibaultweber.github.io/PetitProf/`
+**URL de déploiement :** `https://petit-prof-site.onrender.com`
+
+**Configuration Render** :
+- Fichier `render.yaml` configuré pour le déploiement statique
+- Redirections configurées dans `_redirects`
+- Déploiement automatique depuis GitHub
+
+**Étapes de déploiement** :
+1. Connectez-vous sur [render.com](https://render.com)
+2. Créez un nouveau "Static Site"
+3. Connectez votre dépôt GitHub
+4. Render détectera automatiquement la configuration
+5. Le site sera déployé en quelques minutes
 
 ### **Déploiement Local**
 1. Clonez le dépôt : `git clone https://github.com/ThibaultWeber/PetitProf.git`
@@ -134,8 +148,8 @@ Ce projet est sous licence libre. Tous les contenus pédagogiques sont la propri
 - ✅ Conversion complète en frontend
 - ✅ Calculatrice graphique avancée
 - ✅ Suppression des dépendances Python
-- ✅ Déploiement GitHub Pages
-- ✅ Workflows GitHub Actions
+- ✅ Configuration Render pour déploiement
+- ✅ Redirections et routes optimisées
 
 ---
 

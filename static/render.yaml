@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: petit-prof-site
+    env: static
+    buildCommand: echo "Site statique - pas de build nécessaire"
+    startCommand: echo "Site statique déployé avec succès"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

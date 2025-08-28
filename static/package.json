@@ -1,0 +1,26 @@
+{
+  "name": "petit-prof-site",
+  "version": "1.0.0",
+  "description": "Site web Petit Prof - Cours particuliers et en ligne de mathématiques et physique",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Site statique déployé avec succès'",
+    "build": "echo 'Site statique - pas de build nécessaire'",
+    "deploy": "echo 'Déploiement sur Render terminé'"
+  },
+  "keywords": [
+    "mathématiques",
+    "physique",
+    "cours-particuliers",
+    "éducation",
+    "lycée",
+    "calculatrice-graphique"
+  ],
+  "author": "Thibault Weber",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThibaultWeber/PetitProf.git"
+  },
+  "homepage": "https://petit-prof-site.onrender.com"
+}
