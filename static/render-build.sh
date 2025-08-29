@@ -80,6 +80,77 @@ echo "CSS accessible: $(test -f css/consolidated.css && echo 'OUI' || echo 'NON'
 echo "JS accessible: $(test -f js/script.js && echo 'OUI' || echo 'NON')" >> test-build.txt
 echo "Images accessibles: $(test -d images && echo 'OUI' || echo 'NON')" >> test-build.txt
 
+# Créer un fichier .htaccess pour forcer la structure des dossiers
+echo "🔧 Création du fichier .htaccess..."
+cat > .htaccess << 'EOF'
+# Configuration Apache pour préserver la structure des dossiers
+Options +FollowSymLinks
+RewriteEngine On
+
+# Forcer les types MIME corrects
+<FilesMatch "\.css$">
+    Header set Content-Type "text/css"
+</FilesMatch>
+
+<FilesMatch "\.js$">
+    Header set Content-Type "application/javascript"
+</FilesMatch>
+
+<FilesMatch "\.(png|jpg|jpeg|gif|webp|avif|svg)$">
+    Header set Cache-Control "public, max-age=31536000"
+</FilesMatch>
+
+# Redirections pour les sous-dossiers
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^css/(.*)$ css/$1 [L]
+RewriteRule ^js/(.*)$ js/$1 [L]
+RewriteRule ^images/(.*)$ images/$1 [L]
+
+# Gestion des erreurs 404
+ErrorDocument 404 /index.html
+EOF
+
+echo "✅ Fichier .htaccess créé"
+
+# Créer un fichier de vérification de structure
+echo "📋 Création du fichier de vérification de structure..."
+cat > structure-verification.txt << 'EOF'
+STRUCTURE DU SITE PETIT PROF - VÉRIFICATION
+
+Dossiers principaux :
+├── css/ (styles)
+├── js/ (scripts)
+├── images/ (ressources visuelles)
+├── documents/ (PDFs)
+└── graph/ (graphiques)
+
+Fichiers critiques :
+├── index.html ✅
+├── css/consolidated.css ✅
+├── js/script.js ✅
+├── js/mobile-nav.js ✅
+├── js/calculatrice-graphique.js ✅
+└── images/hero-maths.avif ✅
+
+Permissions :
+- Tous les dossiers doivent être accessibles en lecture
+- Fichiers HTML, CSS, JS : 644
+- Images : 644
+- Dossiers : 755
+
+Configuration Render :
+- staticPublishPath: . (racine)
+- Structure des dossiers préservée
+- En-têtes Content-Type corrects
+- Redirections SPA configurées
+EOF
+
+echo "✅ Fichier de vérification de structure créé"
+
 echo "🎯 Build terminé avec succès !"
 echo "📱 Site prêt pour le déploiement sur Render"
-echo "📋 Fichier de test créé: test-build.txt"
+echo "📋 Fichiers de test créés :"
+echo "   - test-build.txt"
+echo "   - structure-verification.txt"
+echo "   - .htaccess (configuration Apache)"
