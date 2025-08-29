@@ -1,16 +1,37 @@
 # Redirections pour le site Petit Prof
-# Gestion des routes SPA
+# Gestion des routes SPA et navigation
 
 # Redirection de la racine vers index.html
 / /index.html 200
 
-# Redirection des pages principales
+# Redirection des pages principales (routes exactes)
 /cours-particuliers /cours-particuliers-page.html 200
 /cours-en-ligne /cours-en-ligne-page.html 200
 /calculatrice /calculatrice-graphique.html 200
 /youtube /youtube-page.html 200
 /contact /contact-page.html 200
 
-# Gestion des erreurs 404
-/* /index.html 200
+# Routes pour les pages de niveau
+/seconde /seconde.html 200
+/premiere-es /premiere-es.html 200
+/premiere-physique /premiere-physique.html 200
+/premiere-sti2d /premiere-sti2d.html 200
+/terminale-es /terminale-es.html 200
+/terminale-physique /terminale-physique.html 200
+/terminale-sti2d /terminale-sti2d.html 200
+/capes /capes.html 200
+/classe-preparatoire /classe-preparatoire.html 200
 
+# Pages utilitaires
+/outils-maths /outils-maths.html 200
+/fiches-methodes /fiches-methodes.html 200
+
+# Redirections pour les ressources statiques
+/css/* /css/* 200
+/js/* /js/* 200
+/images/* /images/* 200
+/documents/* /documents/* 200
+/graph/* /graph/* 200
+
+# Gestion des erreurs 404 - redirection vers l'accueil
+/* /index.html 200

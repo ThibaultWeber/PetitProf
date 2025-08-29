@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Navigation - Petit Prof</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .success { color: green; }
+        .error { color: red; }
+        .warning { color: orange; }
+        .info { color: blue; }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background: #f8f9fa;
+        }
+        .test-result.success { background: #d4edda; border: 1px solid #c3e6cb; }
+        .test-result.error { background: #f8d7da; border: 1px solid #f5c6cb; }
+        .test-result.warning { background: #fff3cd; border: 1px solid #ffeaa7; }
+        .test-result.info { background: #d1ecf1; border: 1px solid #bee5eb; }
+        .nav-test {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .nav-button {
+            padding: 10px;
+            background: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+        .nav-button:hover {
+            background: #4f46e5;
+        }
+        .nav-button.success {
+            background: #10b981;
+        }
+        .nav-button.error {
+            background: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test de Navigation - Site Petit Prof</h1>
+    
+    <div class="test-section">
+        <h2>📊 Informations de Base</h2>
+        <div class="test-result info">
+            <strong>URL actuelle :</strong> <span id="current-url"></span>
+        </div>
+        <div class="test-result info">
+            <strong>Base URL :</strong> <span id="base-url"></span>
+        </div>
+        <div class="test-result info">
+            <strong>Timestamp :</strong> <span id="timestamp"></span>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔗 Test des Liens de Navigation</h2>
+        <div class="nav-test">
+            <a href="index.html" class="nav-button" target="_blank">🏠 Accueil</a>
+            <a href="cours-particuliers-page.html" class="nav-button" target="_blank">👨‍🏫 Cours Particuliers</a>
+            <a href="cours-en-ligne-page.html" class="nav-button" target="_blank">💻 Cours en Ligne</a>
+            <a href="calculatrice-graphique.html" class="nav-button" target="_blank">🧮 Calculatrice</a>
+            <a href="youtube-page.html" class="nav-button" target="_blank">📺 YouTube</a>
+            <a href="contact-page.html" class="nav-button" target="_blank">📧 Contact</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>📚 Test des Pages de Niveau</h2>
+        <div class="nav-test">
+            <a href="seconde.html" class="nav-button" target="_blank">2️⃣ Seconde</a>
+            <a href="premiere-es.html" class="nav-button" target="_blank">1️⃣ ES</a>
+            <a href="premiere-physique.html" class="nav-button" target="_blank">1️⃣ Physique</a>
+            <a href="premiere-sti2d.html" class="nav-button" target="_blank">1️⃣ STI2D</a>
+            <a href="terminale-es.html" class="nav-button" target="_blank">T ES</a>
+            <a href="terminale-physique.html" class="nav-button" target="_blank">T Physique</a>
+            <a href="terminale-sti2d.html" class="nav-button" target="_blank">T STI2D</a>
+            <a href="capes.html" class="nav-button" target="_blank">🎓 CAPES</a>
+            <a href="classe-preparatoire.html" class="nav-button" target="_blank">📖 CPGE</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🛠️ Test des Pages Utilitaires</h2>
+        <div class="nav-test">
+            <a href="outils-maths.html" class="nav-button" target="_blank">📐 Outils Maths</a>
+            <a href="fiches-methodes.html" class="nav-button" target="_blank">📋 Fiches Méthodes</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔍 Test des Routes Render</h2>
+        <div class="nav-test">
+            <a href="/cours-particuliers" class="nav-button" target="_blank">/cours-particuliers</a>
+            <a href="/cours-en-ligne" class="nav-button" target="_blank">/cours-en-ligne</a>
+            <a href="/calculatrice" class="nav-button" target="_blank">/calculatrice</a>
+            <a href="/youtube" class="nav-button" target="_blank">/youtube</a>
+            <a href="/contact" class="nav-button" target="_blank">/contact</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>📋 Résumé des Tests de Navigation</h2>
+        <div id="navigation-summary">
+            <p>Cliquez sur les boutons ci-dessus pour tester chaque page.</p>
+            <p><strong>Instructions :</strong></p>
+            <ul>
+                <li>✅ <strong>Vert</strong> : Page fonctionne parfaitement</li>
+                <li>⚠️ <strong>Orange</strong> : Page accessible mais avec problèmes</li>
+                <li>❌ <strong>Rouge</strong> : Page inaccessible ou erreur</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🧪 Test Automatique des Pages</h2>
+        <button onclick="testAllPages()" style="padding: 15px 30px; background: #6366f1; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+            🚀 Lancer le Test Automatique de Toutes les Pages
+        </button>
+        <div id="auto-test-results"></div>
+    </div>
+
+    <script>
+        // Informations de base
+        document.getElementById('current-url').textContent = window.location.href;
+        document.getElementById('base-url').textContent = window.location.origin;
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+
+        // Fonction de test automatique des pages
+        async function testAllPages() {
+            const resultsContainer = document.getElementById('auto-test-results');
+            resultsContainer.innerHTML = '<div class="test-result info">🔄 Test en cours...</div>';
+            
+            const pages = [
+                'index.html',
+                'cours-particuliers-page.html',
+                'cours-en-ligne-page.html',
+                'calculatrice-graphique.html',
+                'youtube-page.html',
+                'contact-page.html',
+                'seconde.html',
+                'premiere-es.html',
+                'premiere-physique.html',
+                'premiere-sti2d.html',
+                'terminale-es.html',
+                'terminale-physique.html',
+                'terminale-sti2d.html',
+                'capes.html',
+                'classe-preparatoire.html',
+                'outils-maths.html',
+                'fiches-methodes.html'
+            ];
+            
+            let results = [];
+            
+            for (const page of pages) {
+                try {
+                    const response = await fetch(page, { method: 'HEAD' });
+                    const status = response.status;
+                    const success = status === 200;
+                    
+                    results.push({
+                        page,
+                        status,
+                        success,
+                        message: success ? 'Page accessible' : `Erreur ${status}`
+                    });
+                } catch (error) {
+                    results.push({
+                        page,
+                        status: 'ERROR',
+                        success: false,
+                        message: `Erreur de connexion: ${error.message}`
+                    });
+                }
+            }
+            
+            // Affichage des résultats
+            let html = '<h3>📊 Résultats du Test Automatique</h3>';
+            let successCount = 0;
+            
+            results.forEach(result => {
+                const statusClass = result.success ? 'success' : 'error';
+                const icon = result.success ? '✅' : '❌';
+                successCount++;
+                
+                html += `
+                    <div class="test-result ${statusClass}">
+                        ${icon} <strong>${result.page}</strong> - ${result.message}
+                    </div>
+                `;
+            });
+            
+            const successRate = Math.round((successCount / results.length) * 100);
+            const summaryClass = successRate === 100 ? 'success' : successRate >= 80 ? 'warning' : 'error';
+            const summaryIcon = successRate === 100 ? '🎉' : successRate >= 80 ? '⚠️' : '❌';
+            
+            html += `
+                <div class="test-result ${summaryClass}">
+                    ${summaryIcon} <strong>Résumé</strong> : ${successCount}/${results.length} pages accessibles (${successRate}%)
+                </div>
+            `;
+            
+            resultsContainer.innerHTML = html;
+        }
+
+        // Test des liens au clic
+        document.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Ajouter une classe temporaire pour indiquer le clic
+                this.style.opacity = '0.7';
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
