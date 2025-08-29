@@ -44,10 +44,8 @@ Site web pédagogique 100% frontend pour les cours de mathématiques et sciences
 
 ### **Outils de Développement**
 - **Git** : Versioning
-- **GitHub** : Hébergement du code source et déploiement
-- **GitHub Pages** : Hébergement gratuit du site
-- **GitHub Actions** : Déploiement automatique
-- **Render** : Alternative de déploiement
+- **GitHub** : Hébergement du code source
+- **Render** : Déploiement et hébergement du site
 
 ## 📁 **Structure du Projet**
 
@@ -74,23 +72,23 @@ PetitProf/
 
 ## 🌐 **Déploiement**
 
-### **GitHub Pages (Recommandé)**
-Le site est maintenant configuré pour être déployé sur GitHub Pages, une solution gratuite et fiable.
+### **Render (Recommandé)**
+Le site est configuré pour être déployé sur Render, une plateforme moderne et fiable.
 
-**Configuration GitHub Pages** :
-- Workflow GitHub Actions configuré pour le déploiement automatique
-- Fichier `.nojekyll` pour désactiver le traitement Jekyll
-- Déploiement automatique depuis la branche main/master
+**URL de déploiement :** `https://petit-prof-site.onrender.com`
+
+**Configuration Render** :
+- Fichier `_render.yaml` configuré pour le déploiement statique
+- Script de build `render-build.sh` pour la vérification
+- Redirections configurées dans `_redirects`
+- Déploiement automatique depuis GitHub
 
 **Étapes de déploiement** :
-1. Assurez-vous que votre dépôt est public
-2. Allez dans Settings > Pages de votre dépôt GitHub
-3. Sélectionnez "GitHub Actions" comme source
-4. Poussez vos modifications sur la branche main/master
-5. Le site sera automatiquement déployé sur `https://[username].github.io/[repo-name]`
-
-### **Render (Alternative)**
-Le site peut également être déployé sur Render si nécessaire.
+1. Connectez-vous sur [render.com](https://render.com)
+2. Créez un nouveau "Static Site"
+3. Connectez votre dépôt GitHub
+4. Render détectera automatiquement la configuration
+5. Le site sera déployé en quelques minutes
 
 **Configuration Render** :
 - Fichier `render.yaml` configuré pour le déploiement statique
