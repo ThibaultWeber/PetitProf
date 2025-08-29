@@ -182,3 +182,4 @@ Après correction, votre site doit s'afficher **exactement comme en local** :
 4. **Contactez le support Render** si nécessaire
 
 **Votre site Petit Prof sera bientôt parfaitement fonctionnel sur Render !** 🚀✨
+

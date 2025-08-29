@@ -78,3 +78,4 @@
 Toutes les fonctionnalités fonctionnent entièrement dans le navigateur sans nécessiter de serveur backend. La calculatrice graphique utilise des bibliothèques JavaScript avancées pour les calculs mathématiques, et le site peut être hébergé sur n'importe quel service d'hébergement statique (GitHub Pages, Netlify, Vercel, etc.).
 
 **Aucune action supplémentaire requise** - le site est prêt pour la production en mode frontend !
+

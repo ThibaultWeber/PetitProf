@@ -66,3 +66,4 @@ fi
 
 echo "🎯 Build terminé avec succès !"
 echo "📱 Site prêt pour le déploiement sur Render"
+

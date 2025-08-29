@@ -35,3 +35,4 @@ services:
       - path: /*.avif
         name: Content-Type
         value: "image/avif"
+

@@ -181,3 +181,4 @@ Votre site Petit Prof est maintenant configuré pour un déploiement professionn
 **URL de production :** `https://petit-prof-site.onrender.com`
 
 **Prochaine étape :** Créer le service sur Render et connecter votre dépôt GitHub.
+
