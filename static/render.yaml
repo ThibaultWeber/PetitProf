@@ -14,20 +14,29 @@ services:
         name: Cache-Control
         value: "public, max-age=31536000"
       - path: /*.css
-        name: Cache-Control
-        value: "public, max-age=31536000"
+        name: Content-Type
+        value: "text/css"
       - path: /*.js
-        name: Cache-Control
-        value: "public, max-age=31536000"
+        name: Content-Type
+        value: "application/javascript"
       - path: /*.png
-        name: Cache-Control
-        value: "public, max-age=31536000"
+        name: Content-Type
+        value: "image/png"
       - path: /*.jpg
-        name: Cache-Control
-        value: "public, max-age=31536000"
+        name: Content-Type
+        value: "image/jpeg"
       - path: /*.webp
-        name: Cache-Control
-        value: "public, max-age=31536000"
+        name: Content-Type
+        value: "image/webp"
       - path: /*.avif
-        name: Cache-Control
-        value: "public, max-age=31536000"
+        name: Content-Type
+        value: "image/avif"
+      - path: /*.svg
+        name: Content-Type
+        value: "image/svg+xml"
+      - path: /*.html
+        name: Content-Type
+        value: "text/html"
+      - path: /*.pdf
+        name: Content-Type
+        value: "application/pdf"

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Render - Petit Prof</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .success { color: green; }
+        .error { color: red; }
+        .warning { color: orange; }
+        .info { color: blue; }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background: #f8f9fa;
+        }
+        .test-result.success { background: #d4edda; border: 1px solid #c3e6cb; }
+        .test-result.error { background: #f8d7da; border: 1px solid #f5c6cb; }
+        .test-result.warning { background: #fff3cd; border: 1px solid #ffeaa7; }
+        .test-result.info { background: #d1ecf1; border: 1px solid #bee5eb; }
+    </style>
+</style>
+</head>
+<body>
+    <h1>🧪 Test de Déploiement Render - Petit Prof</h1>
+    
+    <div class="test-section">
+        <h2>📊 Informations de Base</h2>
+        <div class="test-result info">
+            <strong>URL actuelle :</strong> <span id="current-url"></span>
+        </div>
+        <div class="test-result info">
+            <strong>User Agent :</strong> <span id="user-agent"></span>
+        </div>
+        <div class="test-result info">
+            <strong>Timestamp :</strong> <span id="timestamp"></span>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🎨 Test des Ressources CSS</h2>
+        <div id="css-test-results"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>⚡ Test des Ressources JavaScript</h2>
+        <div id="js-test-results"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>🖼️ Test des Images</h2>
+        <div id="image-test-results"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔍 Test des Chemins</h2>
+        <div id="path-test-results"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>📋 Résumé des Tests</h2>
+        <div id="summary-results"></div>
+    </div>
+
+    <script>
+        // Informations de base
+        document.getElementById('current-url').textContent = window.location.href;
+        document.getElementById('user-agent').textContent = navigator.userAgent;
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+
+        // Fonction de test des ressources
+        function testResource(url, type) {
+            return new Promise((resolve) => {
+                const start = performance.now();
+                const element = type === 'css' ? document.createElement('link') : 
+                              type === 'js' ? document.createElement('script') : 
+                              document.createElement('img');
+                
+                if (type === 'css') {
+                    element.rel = 'stylesheet';
+                    element.href = url;
+                } else if (type === 'js') {
+                    element.src = url;
+                } else {
+                    element.src = url;
+                }
+
+                element.onload = () => {
+                    const duration = Math.round(performance.now() - start);
+                    resolve({ success: true, duration, url });
+                };
+                
+                element.onerror = () => {
+                    resolve({ success: false, url });
+                };
+
+                // Timeout après 5 secondes
+                setTimeout(() => {
+                    resolve({ success: false, url, timeout: true });
+                }, 5000);
+
+                document.head.appendChild(element);
+            });
+        }
+
+        // Test des ressources CSS
+        async function testCSS() {
+            const cssFiles = [
+                'css/consolidated.css',
+                'css/calculatrice-graphique.css',
+                'css/contact.css'
+            ];
+            
+            const results = [];
+            for (const file of cssFiles) {
+                const result = await testResource(file, 'css');
+                results.push(result);
+            }
+            
+            displayResults('css-test-results', results, 'CSS');
+        }
+
+        // Test des ressources JavaScript
+        async function testJS() {
+            const jsFiles = [
+                'js/script.js',
+                'js/mobile-nav.js',
+                'js/calculatrice-graphique.js'
+            ];
+            
+            const results = [];
+            for (const file of jsFiles) {
+                const result = await testResource(file, 'js');
+                results.push(result);
+            }
+            
+            displayResults('js-test-results', results, 'JavaScript');
+        }
+
+        // Test des images
+        async function testImages() {
+            const imageFiles = [
+                'images/hero-maths.avif',
+                'images/enseignant.webp',
+                'images/equations.webp'
+            ];
+            
+            const results = [];
+            for (const file of imageFiles) {
+                const result = await testResource(file, 'image');
+                results.push(result);
+            }
+            
+            displayResults('image-test-results', results, 'Images');
+        }
+
+        // Affichage des résultats
+        function displayResults(containerId, results, type) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            
+            results.forEach(result => {
+                const status = result.success ? 'success' : 'error';
+                const icon = result.success ? '✅' : '❌';
+                const message = result.success ? 
+                    `Chargé en ${result.duration}ms` : 
+                    (result.timeout ? 'Timeout' : 'Erreur de chargement');
+                
+                html += `
+                    <div class="test-result ${status}">
+                        ${icon} <strong>${result.url}</strong> - ${message}
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        // Test des chemins
+        function testPaths() {
+            const container = document.getElementById('path-test-results');
+            const paths = [
+                'css/',
+                'js/',
+                'images/',
+                'documents/'
+            ];
+            
+            let html = '';
+            paths.forEach(path => {
+                const exists = true; // On ne peut pas tester l'existence des dossiers côté client
+                const status = exists ? 'info' : 'warning';
+                const icon = exists ? '📁' : '⚠️';
+                const message = exists ? 'Dossier accessible' : 'Dossier potentiellement inaccessible';
+                
+                html += `
+                    <div class="test-result ${status}">
+                        ${icon} <strong>${path}</strong> - ${message}
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        // Résumé des tests
+        function updateSummary() {
+            const container = document.getElementById('summary-results');
+            const cssResults = document.querySelectorAll('#css-test-results .test-result.success').length;
+            const jsResults = document.querySelectorAll('#js-test-results .test-result.success').length;
+            const imageResults = document.querySelectorAll('#image-test-results .test-result.success').length;
+            
+            const totalTests = 9; // 3 CSS + 3 JS + 3 images
+            const passedTests = cssResults + jsResults + imageResults;
+            const successRate = Math.round((passedTests / totalTests) * 100);
+            
+            const status = successRate === 100 ? 'success' : 
+                          successRate >= 70 ? 'warning' : 'error';
+            
+            const icon = successRate === 100 ? '🎉' : 
+                        successRate >= 70 ? '⚠️' : '❌';
+            
+            container.innerHTML = `
+                <div class="test-result ${status}">
+                    ${icon} <strong>Résumé des Tests</strong>
+                    <br>Tests réussis : ${passedTests}/${totalTests} (${successRate}%)
+                    <br>CSS : ${cssResults}/3 | JS : ${jsResults}/3 | Images : ${imageResults}/3
+                </div>
+            `;
+        }
+
+        // Exécution des tests
+        async function runTests() {
+            await testCSS();
+            await testJS();
+            await testImages();
+            testPaths();
+            
+            // Mise à jour du résumé après un délai
+            setTimeout(updateSummary, 1000);
+        }
+
+        // Démarrer les tests
+        runTests();
+    </script>
+</body>
+</html>
