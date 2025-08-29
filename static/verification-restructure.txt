@@ -1,0 +1,81 @@
+VÉRIFICATION DE LA RESTRUCTURATION
+========================================
+
+FICHIERS À LA RACINE :
+  ✅ calculatrice-graphique.html
+  ✅ capes.html
+  ✅ classe-preparatoire.html
+  ✅ contact-page.html
+  ✅ cours-en-ligne-page.html
+  ✅ cours-particuliers-page.html
+  ✅ css-calculatrice-graphique.css
+  ✅ css-consolidated.css
+  ✅ css-contact.css
+  ✅ css-cours-en-ligne-page.css
+  ✅ css-cours-particuliers.css
+  ✅ css-youtube-page.css
+  ✅ fiches-methodes.html
+  ✅ footer.html
+  ✅ img-Avis1.avif
+  ✅ img-Avis2.avif
+  ✅ img-Avis3.avif
+  ✅ img-Portrait.avif
+  ✅ img-bibliotheque.jpg
+  ✅ img-bibliotheque.webp
+  ✅ img-chimie.jpg
+  ✅ img-chimie2.jpg
+  ✅ img-chimie2.webp
+  ✅ img-contact.avif
+  ✅ img-contact1.jpg
+  ✅ img-contact1.webp
+  ✅ img-cours-en-ligne.avif
+  ✅ img-energie.jpg
+  ✅ img-energie.webp
+  ✅ img-enseignant.jpg
+  ✅ img-enseignant.webp
+  ✅ img-equations.jpg
+  ✅ img-equations.webp
+  ✅ img-etudes.jpg
+  ✅ img-etudes.webp
+  ✅ img-fiches-methodes.avif
+  ✅ img-groupe.jpg
+  ✅ img-groupe1.jpg
+  ✅ img-groupe1.webp
+  ✅ img-hero-math.avif
+  ✅ img-hero-maths.avif
+  ✅ img-labo1.jpg
+  ✅ img-labo2.jpg
+  ✅ img-librairie.jpg
+  ✅ img-librairie.webp
+  ✅ img-meca.jpg
+  ✅ img-meca.webp
+  ✅ img-molécules.avif
+  ✅ img-petitprof.jpg
+  ✅ img-profil.jpg
+  ✅ img-robot.jpg
+  ✅ img-seconde.avif
+  ✅ img-visio.jpg
+  ✅ img-visio1.jpg
+  ✅ img-visio1.webp
+  ✅ img-youtube.svg
+  ✅ index.html
+  ✅ js-calculatrice-graphique.js
+  ✅ js-mobile-nav.js
+  ✅ js-script.js
+  ✅ lazy-loading-demo.html
+  ✅ nav.html
+  ✅ outils-maths.html
+  ✅ premiere-es.html
+  ✅ premiere-physique.html
+  ✅ premiere-sti2d.html
+  ✅ seconde.html
+  ✅ terminale-es.html
+  ✅ terminale-physique.html
+  ✅ terminale-sti2d.html
+  ✅ test-images.html
+  ✅ test-navigation.html
+  ✅ test-render.html
+  ✅ youtube-page.html
+
+TOTAL : 6 CSS, 3 JS, 42 images
+Tous les fichiers sont maintenant à la racine pour Render !

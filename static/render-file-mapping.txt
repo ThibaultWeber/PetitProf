@@ -1,0 +1,59 @@
+MAPPING DES FICHIERS POUR RENDER
+========================================
+
+FICHIERS CSS :
+  calculatrice-graphique.css → css-calculatrice-graphique.css
+  consolidated.css → css-consolidated.css
+  contact.css → css-contact.css
+  cours-en-ligne-page.css → css-cours-en-ligne-page.css
+  cours-particuliers.css → css-cours-particuliers.css
+  youtube-page.css → css-youtube-page.css
+
+FICHIERS JAVASCRIPT :
+  calculatrice-graphique.js → js-calculatrice-graphique.js
+  mobile-nav.js → js-mobile-nav.js
+  script.js → js-script.js
+
+IMAGES :
+  Avis1.avif → img-Avis1.avif
+  Avis2.avif → img-Avis2.avif
+  Avis3.avif → img-Avis3.avif
+  bibliotheque.jpg → img-bibliotheque.jpg
+  bibliotheque.webp → img-bibliotheque.webp
+  chimie.jpg → img-chimie.jpg
+  chimie2.jpg → img-chimie2.jpg
+  chimie2.webp → img-chimie2.webp
+  contact.avif → img-contact.avif
+  contact1.jpg → img-contact1.jpg
+  contact1.webp → img-contact1.webp
+  cours-en-ligne.avif → img-cours-en-ligne.avif
+  energie.jpg → img-energie.jpg
+  energie.webp → img-energie.webp
+  enseignant.jpg → img-enseignant.jpg
+  enseignant.webp → img-enseignant.webp
+  equations.jpg → img-equations.jpg
+  equations.webp → img-equations.webp
+  etudes.jpg → img-etudes.jpg
+  etudes.webp → img-etudes.webp
+  fiches-methodes.avif → img-fiches-methodes.avif
+  groupe.jpg → img-groupe.jpg
+  groupe1.jpg → img-groupe1.jpg
+  groupe1.webp → img-groupe1.webp
+  hero-math.avif → img-hero-math.avif
+  hero-maths.avif → img-hero-maths.avif
+  labo1.jpg → img-labo1.jpg
+  labo2.jpg → img-labo2.jpg
+  librairie.jpg → img-librairie.jpg
+  librairie.webp → img-librairie.webp
+  meca.jpg → img-meca.jpg
+  meca.webp → img-meca.webp
+  molécules.avif → img-molécules.avif
+  petitprof.jpg → img-petitprof.jpg
+  Portrait.avif → img-Portrait.avif
+  profil.jpg → img-profil.jpg
+  robot.jpg → img-robot.jpg
+  seconde.avif → img-seconde.avif
+  visio.jpg → img-visio.jpg
+  visio1.jpg → img-visio1.jpg
+  visio1.webp → img-visio1.webp
+  youtube.svg → img-youtube.svg
