@@ -60,3 +60,4 @@ echo "   https://petit-prof-site.onrender.com"
 echo ""
 echo "💡 Le déploiement prend généralement 2-5 minutes"
 echo "📊 Surveillez les logs de build dans l'interface Render"
+

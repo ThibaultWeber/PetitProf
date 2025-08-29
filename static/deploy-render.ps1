@@ -60,3 +60,4 @@ Write-Host "   https://petit-prof-site.onrender.com" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "💡 Le déploiement prend généralement 2-5 minutes" -ForegroundColor Yellow
 Write-Host "📊 Surveillez les logs de build dans l'interface Render" -ForegroundColor Yellow
+

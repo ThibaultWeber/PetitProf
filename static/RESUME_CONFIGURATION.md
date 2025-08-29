@@ -151,3 +151,4 @@ Votre site Petit Prof est **100% prêt** pour le déploiement sur Render !
 **🌟 Configuration Render terminée avec succès !**
 
 Pour toute question, consultez le `GUIDE_DEPLOIEMENT_RENDER.md` ou exécutez `python verify-render.py`.
+
