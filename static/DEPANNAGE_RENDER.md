@@ -183,3 +183,4 @@ Après correction, votre site doit s'afficher **exactement comme en local** :
 
 **Votre site Petit Prof sera bientôt parfaitement fonctionnel sur Render !** 🚀✨
 
+

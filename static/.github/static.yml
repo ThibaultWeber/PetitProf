@@ -1,0 +1,25 @@
+# Configuration GitHub Pages
+# Ce fichier configure le comportement de GitHub Pages
+
+# Dossier source (par défaut: / (root))
+source: /
+
+# Dossier de destination (par défaut: /docs)
+destination: /
+
+# Branche de déploiement (par défaut: gh-pages)
+branch: gh-pages
+
+# Configuration Jekyll (désactivé pour les sites statiques)
+jekyll: false
+
+# Headers personnalisés
+headers:
+  - path: /*
+    headers:
+      - key: X-Frame-Options
+        value: DENY
+      - key: X-Content-Type-Options
+        value: nosniff
+      - key: X-XSS-Protection
+        value: 1; mode=block

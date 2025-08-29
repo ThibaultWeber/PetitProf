@@ -79,3 +79,4 @@ Toutes les fonctionnalités fonctionnent entièrement dans le navigateur sans n�
 
 **Aucune action supplémentaire requise** - le site est prêt pour la production en mode frontend !
 
+
