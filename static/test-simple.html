@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Simple - Petit Prof</title>
+    <link rel="stylesheet" href="css-consolidated.css">
+    <style>
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .success { color: green; }
+        .error { color: red; }
+        .info { color: blue; }
+    </style>
+</head>
+<body style="background-color: #f0f0f0; font-family: Arial, sans-serif;">
+    <h1>🧪 Test Simple - Site Petit Prof</h1>
+    
+    <div class="test-section">
+        <h2>📊 Test des Fichiers</h2>
+        <p><strong>CSS :</strong> <span id="css-status">Test en cours...</span></p>
+        <p><strong>JavaScript :</strong> <span id="js-status">Test en cours...</span></p>
+        <p><strong>Images :</strong> <span id="img-status">Test en cours...</span></p>
+    </div>
+
+    <div class="test-section">
+        <h2>🖼️ Test d'Image</h2>
+        <img src="img-hero-maths.avif" alt="Test Hero" style="max-width: 300px; border: 2px solid #ccc;">
+        <p><em>Si vous voyez cette image, les images fonctionnent !</em></p>
+    </div>
+
+    <div class="test-section">
+        <h2>🎨 Test de Style</h2>
+        <p>Si ce texte est stylé, le CSS fonctionne !</p>
+        <button onclick="testJS()" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Tester JavaScript
+        </button>
+        <p id="js-result"></p>
+    </div>
+
+    <div class="test-section">
+        <h2>🔗 Navigation</h2>
+        <a href="index.html" style="display: inline-block; padding: 10px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; margin: 5px;">
+            🏠 Accueil
+        </a>
+        <a href="cours-particuliers-page.html" style="display: inline-block; padding: 10px 20px; background: #ffc107; color: black; text-decoration: none; border-radius: 5px; margin: 5px;">
+            👨‍🏫 Cours Particuliers
+        </a>
+        <a href="calculatrice-graphique.html" style="display: inline-block; padding: 10px 20px; background: #dc3545; color: white; text-decoration: none; border-radius: 5px; margin: 5px;">
+            🧮 Calculatrice
+        </a>
+    </div>
+
+    <script src="js-script.js"></script>
+    <script>
+        // Test des fichiers au chargement
+        window.addEventListener('load', function() {
+            testFiles();
+        });
+
+        // Test des fichiers
+        async function testFiles() {
+            // Test CSS
+            try {
+                const cssResponse = await fetch('css-consolidated.css', { method: 'HEAD' });
+                document.getElementById('css-status').innerHTML = 
+                    `<span class="success">✅ CSS accessible (${cssResponse.status})</span>`;
+            } catch (error) {
+                document.getElementById('css-status').innerHTML = 
+                    `<span class="error">❌ CSS inaccessible: ${error.message}</span>`;
+            }
+
+            // Test JavaScript
+            try {
+                const jsResponse = await fetch('js-script.js', { method: 'HEAD' });
+                document.getElementById('js-status').innerHTML = 
+                    `<span class="success">✅ JavaScript accessible (${jsResponse.status})</span>`;
+            } catch (error) {
+                document.getElementById('js-status').innerHTML = 
+                    `<span class="error">❌ JavaScript inaccessible: ${error.message}</span>`;
+            }
+
+            // Test Images
+            try {
+                const imgResponse = await fetch('img-hero-maths.avif', { method: 'HEAD' });
+                document.getElementById('img-status').innerHTML = 
+                    `<span class="success">✅ Images accessibles (${imgResponse.status})</span>`;
+            } catch (error) {
+                document.getElementById('img-status').innerHTML = 
+                    `<span class="error">❌ Images inaccessibles: ${error.message}</span>`;
+            }
+        }
+
+        // Test JavaScript
+        function testJS() {
+            document.getElementById('js-result').innerHTML = 
+                '<span class="success">✅ JavaScript fonctionne !</span>';
+        }
+    </script>
+</body>
+</html>
