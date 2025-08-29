@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Restructuration - Petit Prof</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .success { color: green; }
+        .error { color: red; }
+        .warning { color: orange; }
+        .info { color: blue; }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background: #f8f9fa;
+        }
+        .test-result.success { background: #d4edda; border: 1px solid #c3e6cb; }
+        .test-result.error { background: #f8d7da; border: 1px solid #f5c6cb; }
+        .test-result.warning { background: #fff3cd; border: 1px solid #ffeaa7; }
+        .test-result.info { background: #d1ecf1; border: 1px solid #bee5eb; }
+        .file-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .file-item {
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 4px solid #dee2e6;
+        }
+        .file-item.css { border-left-color: #007bff; }
+        .file-item.js { border-left-color: #28a745; }
+        .file-item.img { border-left-color: #ffc107; }
+        .file-item.html { border-left-color: #dc3545; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test de Restructuration - Site Petit Prof</h1>
+    
+    <div class="test-section">
+        <h2>📊 Informations de Base</h2>
+        <div class="test-result info">
+            <strong>URL actuelle :</strong> <span id="current-url"></span>
+        </div>
+        <div class="test-result info">
+            <strong>Base URL :</strong> <span id="base-url"></span>
+        </div>
+        <div class="test-result info">
+            <strong>Timestamp :</strong> <span id="timestamp"></span>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🎨 Test des Fichiers CSS</h2>
+        <div class="file-list">
+            <div class="file-item css">css-consolidated.css</div>
+            <div class="file-item css">css-calculatrice-graphique.css</div>
+            <div class="file-item css">css-cours-particuliers.css</div>
+            <div class="file-item css">css-cours-en-ligne-page.css</div>
+            <div class="file-item css">css-contact.css</div>
+            <div class="file-item css">css-youtube-page.css</div>
+        </div>
+        <div id="css-test-results"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>⚡ Test des Fichiers JavaScript</h2>
+        <div class="file-list">
+            <div class="file-item js">js-script.js</div>
+            <div class="file-item js">js-mobile-nav.js</div>
+            <div class="file-item js">js-calculatrice-graphique.js</div>
+        </div>
+        <div id="js-test-results"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>🖼️ Test des Images Principales</h2>
+        <div class="file-list">
+            <div class="file-item img">img-hero-maths.avif</div>
+            <div class="file-item img">img-hero-math.avif</div>
+            <div class="file-item img">img-Portrait.avif</div>
+            <div class="file-item img">img-bibliotheque.webp</div>
+            <div class="file-item img">img-groupe1.webp</div>
+            <div class="file-item img">img-chimie.jpg</div>
+        </div>
+        <div id="img-test-results"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔗 Test des Pages HTML</h2>
+        <div class="file-list">
+            <div class="file-item html">index.html</div>
+            <div class="file-item html">cours-particuliers-page.html</div>
+            <div class="file-item html">calculatrice-graphique.html</div>
+            <div class="file-item html">contact-page.html</div>
+        </div>
+        <div id="html-test-results"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>🧪 Test Automatique Complet</h2>
+        <button onclick="runCompleteTest()" style="padding: 15px 30px; background: #6366f1; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+            🚀 Lancer le Test Complet de Restructuration
+        </button>
+        <div id="complete-test-results"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>📋 Résumé de la Restructuration</h2>
+        <div class="test-result info">
+            <h3>✅ Ce qui a été fait :</h3>
+            <ul>
+                <li><strong>Structure aplatie</strong> : Tous les fichiers sont maintenant à la racine</li>
+                <li><strong>Références mises à jour</strong> : HTML modifié pour pointer vers les nouveaux noms</li>
+                <li><strong>Préfixes ajoutés</strong> : css-, js-, img- pour éviter les conflits</li>
+                <li><strong>Sauvegarde créée</strong> : backup-before-restructure/</li>
+            </ul>
+        </div>
+        <div class="test-result warning">
+            <h3>⚠️ Important pour Render :</h3>
+            <ul>
+                <li>Utilisez <strong>render-simple.yaml</strong> au lieu de render.yaml</li>
+                <li>Tous les fichiers sont maintenant accessibles à la racine</li>
+                <li>Plus de problème de structure de dossiers</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Informations de base
+        document.getElementById('current-url').textContent = window.location.href;
+        document.getElementById('base-url').textContent = window.location.origin;
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+
+        // Test des fichiers CSS
+        async function testCSSFiles() {
+            const cssFiles = [
+                'css-consolidated.css',
+                'css-calculatrice-graphique.css',
+                'css-cours-particuliers.css',
+                'css-cours-en-ligne-page.css',
+                'css-contact.css',
+                'css-youtube-page.css'
+            ];
+            
+            let results = [];
+            for (const file of cssFiles) {
+                try {
+                    const response = await fetch(file, { method: 'HEAD' });
+                    results.push({
+                        file,
+                        status: response.status,
+                        success: response.status === 200
+                    });
+                } catch (error) {
+                    results.push({
+                        file,
+                        status: 'ERROR',
+                        success: false
+                    });
+                }
+            }
+            
+            displayResults('css-test-results', results, 'CSS');
+        }
+
+        // Test des fichiers JavaScript
+        async function testJSFiles() {
+            const jsFiles = [
+                'js-script.js',
+                'js-mobile-nav.js',
+                'js-calculatrice-graphique.js'
+            ];
+            
+            let results = [];
+            for (const file of jsFiles) {
+                try {
+                    const response = await fetch(file, { method: 'HEAD' });
+                    results.push({
+                        file,
+                        status: response.status,
+                        success: response.status === 200
+                    });
+                } catch (error) {
+                    results.push({
+                        file,
+                        status: 'ERROR',
+                        success: false
+                    });
+                }
+            }
+            
+            displayResults('js-test-results', results, 'JavaScript');
+        }
+
+        // Test des images
+        async function testImageFiles() {
+            const imageFiles = [
+                'img-hero-maths.avif',
+                'img-hero-math.avif',
+                'img-Portrait.avif',
+                'img-bibliotheque.webp',
+                'img-groupe1.webp',
+                'img-chimie.jpg'
+            ];
+            
+            let results = [];
+            for (const file of imageFiles) {
+                try {
+                    const response = await fetch(file, { method: 'HEAD' });
+                    results.push({
+                        file,
+                        status: response.status,
+                        success: response.status === 200
+                    });
+                } catch (error) {
+                    results.push({
+                        file,
+                        status: 'ERROR',
+                        success: false
+                    });
+                }
+            }
+            
+            displayResults('img-test-results', results, 'Images');
+        }
+
+        // Test des pages HTML
+        async function testHTMLFiles() {
+            const htmlFiles = [
+                'index.html',
+                'cours-particuliers-page.html',
+                'calculatrice-graphique.html',
+                'contact-page.html'
+            ];
+            
+            let results = [];
+            for (const file of htmlFiles) {
+                try {
+                    const response = await fetch(file, { method: 'HEAD' });
+                    results.push({
+                        file,
+                        status: response.status,
+                        success: response.status === 200
+                    });
+                } catch (error) {
+                    results.push({
+                        file,
+                        status: 'ERROR',
+                        success: false
+                    });
+                }
+            }
+            
+            displayResults('html-test-results', results, 'HTML');
+        }
+
+        // Affichage des résultats
+        function displayResults(containerId, results, type) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            let successCount = 0;
+            
+            results.forEach(result => {
+                const statusClass = result.success ? 'success' : 'error';
+                const icon = result.success ? '✅' : '❌';
+                if (result.success) successCount++;
+                
+                html += `
+                    <div class="test-result ${statusClass}">
+                        ${icon} <strong>${result.file}</strong> - ${result.success ? 'Accessible' : `Erreur ${result.status}`}
+                    </div>
+                `;
+            });
+            
+            const successRate = Math.round((successCount / results.length) * 100);
+            const summaryClass = successRate === 100 ? 'success' : successRate >= 80 ? 'warning' : 'error';
+            const summaryIcon = successRate === 100 ? '🎉' : successRate >= 80 ? '⚠️' : '❌';
+            
+            html += `
+                <div class="test-result ${summaryClass}">
+                    ${summaryIcon} <strong>${type}</strong> : ${successCount}/${results.length} accessibles (${successRate}%)
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        // Test complet
+        async function runCompleteTest() {
+            const container = document.getElementById('complete-test-results');
+            container.innerHTML = '<div class="test-result info">🔄 Test complet en cours...</div>';
+            
+            await testCSSFiles();
+            await testJSFiles();
+            await testImageFiles();
+            await testHTMLFiles();
+            
+            container.innerHTML = '<div class="test-result success">✅ Test complet terminé ! Vérifiez les résultats ci-dessus.</div>';
+        }
+
+        // Tests automatiques au chargement
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                testCSSFiles();
+                testJSFiles();
+                testImageFiles();
+                testHTMLFiles();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
