@@ -1,0 +1,152 @@
+services:
+  - type: web
+    name: petit-prof-site
+    env: static
+    buildCommand: |
+      chmod +x render-build.sh
+      ./render-build.sh
+      # Vérification finale de la structure
+      echo "🔍 Vérification finale de la structure..."
+      find . -type f -name "*.css" -o -name "*.js" -o -name "*.html" | head -10
+      echo "📁 Structure des dossiers :"
+      ls -la
+      echo "📁 Contenu du dossier CSS :"
+      ls -la css/ 2>/dev/null || echo "❌ Dossier CSS non trouvé"
+      echo "📁 Contenu du dossier JS :"
+      ls -la js/ 2>/dev/null || echo "❌ Dossier JS non trouvé"
+      echo "📁 Contenu du dossier Images :"
+      ls -la images/ 2>/dev/null || echo "❌ Dossier Images non trouvé"
+    startCommand: echo "Site statique déployé avec succès"
+    staticPublishPath: .
+    routes:
+      # Routes pour les ressources statiques (PRIORITÉ MAXIMALE)
+      - type: rewrite
+        source: /css/*
+        destination: /css/*
+      - type: rewrite
+        source: /js/*
+        destination: /js/*
+      - type: rewrite
+        source: /images/*
+        destination: /images/*
+      - type: rewrite
+        source: /documents/*
+        destination: /documents/*
+      - type: rewrite
+        source: /graph/*
+        destination: /graph/*
+      
+      # Routes pour les pages principales
+      - type: rewrite
+        source: /cours-particuliers
+        destination: /cours-particuliers-page.html
+      - type: rewrite
+        source: /cours-en-ligne
+        destination: /cours-en-ligne-page.html
+      - type: rewrite
+        source: /calculatrice
+        destination: /calculatrice-graphique.html
+      - type: rewrite
+        source: /youtube
+        destination: /youtube-page.html
+      - type: rewrite
+        source: /contact
+        destination: /contact-page.html
+      - type: rewrite
+        source: /seconde
+        destination: /seconde.html
+      - type: rewrite
+        source: /premiere-es
+        destination: /premiere-es.html
+      - type: rewrite
+        source: /premiere-physique
+        destination: /premiere-physique.html
+      - type: rewrite
+        source: /premiere-sti2d
+        destination: /premiere-sti2d.html
+      - type: rewrite
+        source: /terminale-es
+        destination: /terminale-es.html
+      - type: rewrite
+        source: /terminale-physique
+        destination: /terminale-physique.html
+      - type: rewrite
+        source: /terminale-sti2d
+        destination: /terminale-sti2d.html
+      - type: rewrite
+        source: /capes
+        destination: /capes.html
+      - type: rewrite
+        source: /classe-preparatoire
+        destination: /classe-preparatoire.html
+      - type: rewrite
+        source: /outils-maths
+        destination: /outils-maths.html
+      - type: rewrite
+        source: /fiches-methodes
+        destination: /fiches-methodes.html
+      
+      # Route de fallback pour le SPA (DERNIÈRE PRIORITÉ)
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      # En-têtes généraux
+      - path: /*
+        name: Cache-Control
+        value: "public, max-age=31536000"
+      
+      # En-têtes spécifiques par type de fichier
+      - path: /*.css
+        name: Content-Type
+        value: "text/css"
+      - path: /*.js
+        name: Content-Type
+        value: "application/javascript"
+      - path: /*.html
+        name: Content-Type
+        value: "text/html"
+      
+      # En-têtes pour les images
+      - path: /*.png
+        name: Content-Type
+        value: "image/png"
+      - path: /*.jpg
+        name: Content-Type
+        value: "image/jpeg"
+      - path: /*.webp
+        name: Content-Type
+        value: "image/webp"
+      - path: /*.avif
+        name: Content-Type
+        value: "image/avif"
+      - path: /*.svg
+        name: Content-Type
+        value: "image/svg+xml"
+      
+      # En-têtes pour les documents
+      - path: /*.pdf
+        name: Content-Type
+        value: "application/pdf"
+      
+      # En-têtes spécifiques pour les sous-dossiers
+      - path: css/*
+        name: Content-Type
+        value: "text/css"
+      - path: js/*
+        name: Content-Type
+        value: "application/javascript"
+      - path: images/*
+        name: Cache-Control
+        value: "public, max-age=31536000"
+      
+      # En-têtes de sécurité
+      - path: /*
+        name: X-Content-Type-Options
+        value: "nosniff"
+      - path: /*
+        name: X-Frame-Options
+        value: "DENY"
+      - path: /*
+        name: X-XSS-Protection
+        value: "1; mode=block"
