@@ -19,6 +19,74 @@ services:
     startCommand: echo "Site statique déployé avec succès"
     staticPublishPath: .
     routes:
+      # Routes pour les ressources statiques (PRIORITÉ MAXIMALE)
+      - type: rewrite
+        source: /css/*
+        destination: /css/*
+      - type: rewrite
+        source: /js/*
+        destination: /js/*
+      - type: rewrite
+        source: /images/*
+        destination: /images/*
+      - type: rewrite
+        source: /documents/*
+        destination: /documents/*
+      - type: rewrite
+        source: /graph/*
+        destination: /graph/*
+      
+      # Routes pour les pages principales
+      - type: rewrite
+        source: /cours-particuliers
+        destination: /cours-particuliers-page.html
+      - type: rewrite
+        source: /cours-en-ligne
+        destination: /cours-en-ligne-page.html
+      - type: rewrite
+        source: /calculatrice
+        destination: /calculatrice-graphique.html
+      - type: rewrite
+        source: /youtube
+        destination: /youtube-page.html
+      - type: rewrite
+        source: /contact
+        destination: /contact-page.html
+      - type: rewrite
+        source: /seconde
+        destination: /seconde.html
+      - type: rewrite
+        source: /premiere-es
+        destination: /premiere-es.html
+      - type: rewrite
+        source: /premiere-physique
+        destination: /premiere-physique.html
+      - type: rewrite
+        source: /premiere-sti2d
+        destination: /premiere-sti2d.html
+      - type: rewrite
+        source: /terminale-es
+        destination: /terminale-es.html
+      - type: rewrite
+        source: /terminale-physique
+        destination: /terminale-physique.html
+      - type: rewrite
+        source: /terminale-sti2d
+        destination: /terminale-sti2d.html
+      - type: rewrite
+        source: /capes
+        destination: /capes.html
+      - type: rewrite
+        source: /classe-preparatoire
+        destination: /classe-preparatoire.html
+      - type: rewrite
+        source: /outils-maths
+        destination: /outils-maths.html
+      - type: rewrite
+        source: /fiches-methodes
+        destination: /fiches-methodes.html
+      
+      # Route de fallback pour le SPA (DERNIÈRE PRIORITÉ)
       - type: rewrite
         source: /*
         destination: /index.html
