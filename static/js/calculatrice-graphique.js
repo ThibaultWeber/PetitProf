@@ -1,6 +1,7 @@
 /**
  * Calculatrice Graphique Avancée - Petit Prof
  * Version 100% frontend avec bibliothèques mathématiques avancées
+ * INCLUT : Quadrillage, graduations, zoom, déplacement, analyse mathématique
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -45,23 +46,76 @@ document.addEventListener('DOMContentLoaded', function() {
     let dragging = false, lastX, lastY;
     
     /**
-     * Dessine les axes du graphique
+     * Dessine les axes du graphique avec quadrillage et graduations
      */
     function drawAxes() {
-        ctx.strokeStyle = "#888";
-        ctx.lineWidth = 1;
+        // QUADRILLAGE LÉGER EN ARRIÈRE-PLAN
+        ctx.strokeStyle = "#f0f0f0";
+        ctx.lineWidth = 0.5;
         
-        // Axe X
+        // Quadrillage vertical (lignes parallèles à l'axe Y)
+        for (let x = -1000; x <= 1000; x++) {
+            const px = offsetX + x * scale;
+            if (px >= 0 && px <= canvas.width) {
+                ctx.beginPath();
+                ctx.moveTo(px, 0);
+                ctx.lineTo(px, canvas.height);
+                ctx.stroke();
+            }
+        }
+        
+        // Quadrillage horizontal (lignes parallèles à l'axe X)
+        for (let y = -1000; y <= 1000; y++) {
+            const py = offsetY - y * scale;
+            if (py >= 0 && py <= canvas.height) {
+                ctx.beginPath();
+                ctx.moveTo(0, py);
+                ctx.lineTo(canvas.width, py);
+                ctx.stroke();
+            }
+        }
+        
+        // Couleur et style des axes principaux
+        ctx.strokeStyle = "#333";
+        ctx.lineWidth = 2;
+        ctx.fillStyle = "#333";
+        
+        // Axe X (horizontal)
         ctx.beginPath();
         ctx.moveTo(0, offsetY);
         ctx.lineTo(canvas.width, offsetY);
         ctx.stroke();
         
-        // Axe Y
+        // Axe Y (vertical)
         ctx.beginPath();
         ctx.moveTo(offsetX, 0);
         ctx.lineTo(offsetX, canvas.height);
         ctx.stroke();
+        
+        // GRADUATIONS SUR L'AXE X
+        ctx.fillStyle = "#666";
+        ctx.font = "12px Arial";
+        for (let x = -1000; x <= 1000; x++) {
+            const px = offsetX + x * scale;
+            if (px >= 0 && px <= canvas.width) {
+                ctx.beginPath();
+                ctx.moveTo(px, offsetY - 5);
+                ctx.lineTo(px, offsetY + 5);
+                ctx.stroke();
+                ctx.fillText(x.toString(), px - 5, offsetY + 20);
+            }
+        }
+        
+        // GRADUATIONS SUR L'AXE Y
+        for (let y = -1000; y <= 1000; y++) {
+            const py = offsetY - y * scale;
+            if (py >= 0 && py <= canvas.height) {
+                ctx.beginPath();
+                ctx.moveTo(offsetX - 5, py);
+                ctx.lineTo(offsetX + 5, py);
+                ctx.fillText(y.toString(), offsetX + 10, py + 5);
+            }
+        }
     }
     
     /**
@@ -78,12 +132,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     /**
+     * Valide une expression mathématique
+     */
+    function validerExpression(expr) {
+        if (!expr || !expr.trim()) {
+            return { valide: false, erreur: "Expression vide" };
+        }
+        
+        // Vérifier les caractères autorisés
+        const caracteresAutorises = /^[0-9x+\-*/().,^a-zA-Z\s]+$/;
+        if (!caracteresAutorises.test(expr)) {
+            return { valide: false, erreur: "Caractères non autorisés détectés" };
+        }
+        
+        // Vérifier la syntaxe mathématique
+        try {
+            math.parse(expr);
+            return { valide: true };
+        } catch (e) {
+            return { valide: false, erreur: "Syntaxe mathématique invalide" };
+        }
+    }
+    
+    /**
      * Trace la fonction sur le canvas
      */
     function plotFunction() {
         const input = document.getElementById('fonction1').value;
         if (!input.trim()) {
             alert("Veuillez entrer une fonction");
+            return;
+        }
+        
+        // Validation de l'expression
+        const validation = validerExpression(input);
+        if (!validation.valide) {
+            alert(`Erreur de validation: ${validation.erreur}`);
             return;
         }
         
@@ -122,6 +206,124 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.stroke();
 
         analyseFunction(input);
+    }
+    
+    /**
+     * Trace plusieurs fonctions avec des couleurs différentes
+     */
+    function plotMultipleFunctions() {
+        const functions = [];
+        const inputs = ['fonction1', 'fonction2', 'fonction3', 'fonction4', 'fonction5'];
+        
+        // Collecter toutes les fonctions valides
+        inputs.forEach((id, index) => {
+            const input = document.getElementById(id).value.trim();
+            if (input) {
+                const validation = validerExpression(input);
+                if (validation.valide) {
+                    try {
+                        functions.push({
+                            expr: math.parse(input),
+                            input: input,
+                            color: `hsl(${index * 72}, 70%, 50%)`
+                        });
+                    } catch (e) {
+                        console.warn(`Fonction ${index + 1} ignorée: ${e.message}`);
+                    }
+                }
+            }
+        });
+        
+        if (functions.length === 0) {
+            alert("Aucune fonction valide à tracer");
+            return;
+        }
+        
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawAxes();
+        
+        // Tracer chaque fonction
+        functions.forEach(func => {
+            ctx.strokeStyle = func.color;
+            ctx.lineWidth = 2;
+            
+            ctx.beginPath();
+            let first = true;
+            for (let px = 0; px < canvas.width; px++) {
+                const x = (px - offsetX) / scale;
+                const y = func.expr.evaluate({x: x});
+                if (!isNaN(y) && isFinite(y)) {
+                    const py = offsetY - y * scale;
+                    if (first) {
+                        ctx.moveTo(px, py);
+                        first = false;
+                    } else {
+                        ctx.lineTo(px, py);
+                    }
+                } else {
+                    first = true;
+                }
+            }
+            ctx.stroke();
+        });
+        
+        // Afficher la légende
+        displayLegend(functions);
+        analyseMultipleFunctions(functions);
+    }
+    
+    /**
+     * Affiche une légende pour les fonctions tracées
+     */
+    function displayLegend(functions) {
+        const legendDiv = document.getElementById('legend-div') || createLegendDiv();
+        legendDiv.innerHTML = '<h4>🎨 Légende des fonctions :</h4>';
+        
+        functions.forEach((func, index) => {
+            const legendItem = document.createElement('div');
+            legendItem.style.cssText = `
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+                padding: 5px;
+                background: #f8f9fa;
+                border-radius: 4px;
+            `;
+            
+            const colorBox = document.createElement('div');
+            colorBox.style.cssText = `
+                width: 20px;
+                height: 20px;
+                background: ${func.color};
+                margin-right: 10px;
+                border-radius: 3px;
+            `;
+            
+            const label = document.createElement('span');
+            label.textContent = `f${index + 1}(x) = ${func.input}`;
+            
+            legendItem.appendChild(colorBox);
+            legendItem.appendChild(label);
+            legendDiv.appendChild(legendItem);
+        });
+    }
+    
+    /**
+     * Crée le div de légende s'il n'existe pas
+     */
+    function createLegendDiv() {
+        const legendDiv = document.createElement('div');
+        legendDiv.id = 'legend-div';
+        legendDiv.style.cssText = `
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px #ddd;
+        `;
+        resultDiv.parentNode.insertBefore(legendDiv, resultDiv.nextSibling);
+        return legendDiv;
     }
     
     /**
@@ -183,6 +385,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     /**
+     * Analyse mathématique pour plusieurs fonctions
+     */
+    function analyseMultipleFunctions(functions) {
+        analyseDiv.innerHTML = `
+            <div class="analyse-math-block">
+                <h3>📊 Analyse mathématique - ${functions.length} fonction(s)</h3>
+                ${functions.map((func, index) => `
+                    <div class="analyse-fonction" style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                        <b>🎯 f${index + 1}(x) = ${func.input}</b>
+                        <div style="color: ${func.color}; font-weight: bold;">● ${func.color}</div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+    
+    /**
      * Sauvegarde le graphique en PNG
      */
     function saveImage() {
@@ -214,7 +433,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Gestionnaire de soumission du formulaire
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        plotFunction();
+        if (document.getElementById('fonction2').value.trim() || 
+            document.getElementById('fonction3').value.trim() || 
+            document.getElementById('fonction4').value.trim() || 
+            document.getElementById('fonction5').value.trim()) {
+            plotMultipleFunctions();
+        } else {
+            plotFunction();
+        }
     });
     
     // Hover tooltip
@@ -278,6 +504,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <p><strong>4.</strong> Cliquez et glissez pour déplacer la vue</p>
             <p><strong>5.</strong> Survolez la courbe pour voir les coordonnées</p>
             <p><strong>6.</strong> Cliquez sur "Sauvegarder" pour télécharger le graphique</p>
+            <p><strong>7.</strong> Entrez plusieurs fonctions pour les comparer</p>
+            <p><strong>8.</strong> Le quadrillage et les graduations s'adaptent au zoom</p>
         </div>
     `;
 });
