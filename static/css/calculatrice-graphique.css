@@ -207,7 +207,7 @@
 }
 
 /* Messages de chargement */
-#graph-result p:contains("⏳") {
+#graph-result p.loading-message {
     color: #6366f1;
     background: #f0f9ff;
     border-color: #bae6fd;
