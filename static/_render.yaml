@@ -17,7 +17,7 @@ services:
       echo "📁 Contenu du dossier Images :"
       ls -la images/ 2>/dev/null || echo "❌ Dossier Images non trouvé"
     startCommand: echo "Site statique déployé avec succès"
-    staticPublishPath: .
+    staticPublishPath: static
     routes:
       # Routes pour les ressources statiques (PRIORITÉ MAXIMALE)
       - type: rewrite
