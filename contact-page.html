@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Contact - Petit Prof | Professeur Certifié Physique-Chimie et Maths</title>
+    <meta name="description" content="Contactez Petit Prof pour vos cours particuliers en physique-chimie et mathématiques. Email: t.weber.ac@gmail.com - Téléphone: 07 45 10 66 71">
+    <meta name="keywords" content="contact, cours particuliers, physique, chimie, mathématiques, Strasbourg, professeur, soutien scolaire, Petit Prof, Thibault Weber, devis, tarifs, email, téléphone">
+    <link rel="canonical" href="https://petit-prof.fr/contact-page.html">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/contact.css">
+    
+    <link rel="stylesheet" href="./css/mobile-nav-improvements.css">
+<!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- reCAPTCHA v3 - chargé seulement lors de la soumission -->
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/course-pages.css">
+    <link rel="stylesheet" href="css/mobile-nav-improvements.css">
+    
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://petit-prof.fr/#person",
+                "name": "Petit Prof",
+                "alternateName": "Thibault Weber",
+                "jobTitle": "Professeur de Physique-Chimie et Mathématiques",
+                "description": "Professeur de soutien pour tous. Cours particuliers, ressources pédagogiques et vidéos YouTube pour progresser en sciences.",
+                "email": "t.weber.ac@gmail.com",
+                "telephone": "07 45 10 66 71",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Strasbourg",
+                    "addressRegion": "Grand Est",
+                    "addressCountry": "FR"
+                },
+                "url": "https://petit-prof.fr",
+                "sameAs": [
+                    "https://www.youtube.com/@PetitProf67"
+                ]
+            },
+            {
+                "@type": "ContactPage",
+                "@id": "https://petit-prof.fr/contact-page.html#contact",
+                "name": "Contact - Petit Prof",
+                "description": "Page de contact pour les cours particuliers en physique-chimie et mathématiques",
+                "url": "https://petit-prof.fr/contact-page.html",
+                "mainEntity": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "publisher": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "inLanguage": "fr-FR"
+            },
+            {
+                "@type": "EducationalOrganization",
+                "@id": "https://petit-prof.fr/#organization",
+                "name": "Petit Prof",
+                "description": "Organisation proposant des cours particuliers et ressources pédagogiques en physique-chimie et mathématiques",
+                "url": "https://petit-prof.fr",
+                "founder": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "07 45 10 66 71",
+                    "contactType": "customer service",
+                    "email": "t.weber.ac@gmail.com",
+                    "availableLanguage": "French",
+                    "areaServed": "FR",
+                    "hoursAvailable": {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "09:00",
+                        "closes": "18:00"
+                    }
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Strasbourg",
+                    "addressRegion": "Grand Est",
+                    "addressCountry": "FR"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">Petit Prof</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="outils-maths.html">Outils Mathématiques</a></li>
+                        <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
+                        <li><a href="seconde.html">Seconde</a></li>
+                        <li><a href="premiere-es.html">1ère ES</a></li>
+                        <li><a href="terminale-es.html">Terminale ES</a></li>
+                        <li><a href="premiere-sti2d.html">1ère STI2D</a></li>
+                        <li><a href="terminale-sti2d.html">Terminale STI2D</a></li>
+                        <li><a href="premiere-physique.html">1ère Spécialité Physique-Chimie</a></li>
+                        <li><a href="terminale-physique.html">Terminale Spécialité Physique-Chimie</a></li>
+                        <li><a href="capes.html">CAPES</a></li>
+                        <li><a href="classe-preparatoire.html">Classe préparatoire</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="youtube-page.html" class="nav-link">Chaîne YouTube</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="etude-fonction.html" class="nav-link">Outils Numériques <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="etude-fonction.html">Étude de Fonction</a></li>
+                        <li><a href="calculatrice-graphique.html">Calculatrice Graphique</a></li>
+                        <li><a href="convertisseur.html">Convertisseur</a></li>
+                        <li><a href="resolution-systeme.html">Résolution Système</a></li>
+                        <li><a href="courbe-tangente.html">Courbe et Tangente</a></li>
+                        <li><a href="calculatrice-numerique.html">Calculatrice Numérique</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="contact-page.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="close-icon">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de la page Contact -->
+    <header class="contact-header" style="background-image: url('images/contact1.avif'); background-image: -webkit-image-set(url('images/contact1.avif') 1x, url('images/contact1.webp') 1x, url('images/contact1.jpg') 1x);">
+        <div class="container">
+            <div class="contact-header-content">
+                <h1 class="contact-title">CONTACT</h1>
+                <p class="contact-subtitle">N'hésitez pas à me contacter pour toute question ou demande de cours</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Contact Principal -->
+    <section class="main-contact-section">
+        <div class="container">
+            <div class="contact-">
+                <div class="contact-info-card">
+                    <div class="contact-avatar">
+                        <img loading="lazy" decoding="async" src="images/Portrait.avif" alt="[existing]" longdesc="#chimie-desc" class="contact-img">
+                    </div>
+                    
+                    <div class="contact-details">
+                        <h2 class="contact-name">Petit Prof</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <a href="mailto:t.weber.ac@gmail.com" class="contact-link">
+                                    t.weber.ac@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <a href="tel:0745106671" class="contact-link">
+                                    07 45 10 66 71
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulaire de contact -->
+                <div class="contact-form-card" style="padding: 0.7rem 0.5rem;">
+                    <h2 class="form-title" style="font-size: 1.05rem; margin-bottom: 0.5rem;">Envoyez-moi un message</h2>
+                    <form class="contact-form" id="contactForm" style="gap: 0.4rem;">
+                        <div class="form-group" style="margin-bottom: 0.2rem;">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0.2rem;">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0.2rem;">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0.2rem;">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Choisissez un sujet</option>
+                                <option value="cours-particuliers">Cours particuliers</option>
+                                <option value="cours-en-ligne">Cours en ligne</option>
+                                <option value="stages-vacances">Stages pendant les vacances</option>
+                                <option value="orientation">Aide à l'orientation</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0.2rem;">
+                            <label for="level">Niveau de l'élève</label>
+                            <select id="level" name="level">
+                                <option value="">Sélectionnez le niveau</option>
+                                <option value="college">Collège (6ème à 3ème)</option>
+                                <option value="seconde">Seconde</option>
+                                <option value="premiere-es">1ère ES</option>
+                                <option value="terminale-es">Terminale ES</option>
+                                <option value="premiere-sti2d">1ère STI2D</option>
+                                <option value="terminale-sti2d">Terminale STI2D</option>
+                                <option value="premiere-physique">1ère Spécialité Physique-Chimie</option>
+                                <option value="terminale-physique">Terminale Spécialité Physique-Chimie</option>
+                                <option value="superieur">Études supérieures (Bac+1 à Bac+3)</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0.2rem;">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="2" required placeholder="Décrivez votre demande, vos besoins ou vos questions..." style="min-height: 32px; max-height: 60px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="padding: 6px 12px; font-size: 0.9rem; margin-top: 0.1rem;">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Informations Pratiques -->
+    <section class="practical-info-section">
+        <div class="container">
+            <h2 class="section-title">Informations Pratiques</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Horaires de disponibilité</h3>
+                    <p>Lundi au Vendredi : 8h - 20h<br>
+                    Samedi : 9h - 18h<br>
+                    Dimanche : Sur demande</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-reply"></i>
+                    </div>
+                    <h3>Temps de réponse</h3>
+                    <p>Réponse sous 24h maximum<br>
+                    Appel possible en soirée<br>
+                    Urgences : appelez directement</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h3>Tarifs et paiement</h3>
+                    <p>Crédit d'impôt 50%<br>
+                    Paiement CESU accepté<br>
+                    Tarifs dégressifs pour groupes</p>
+                </div>
+            </div>
+            
+            <!-- Section Zone d'intervention avec carte -->
+            <div class="zone-intervention-section">
+                <div class="zone-header">
+                    <div class="zone-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Zone d'intervention</h3>
+                </div>
+                
+                <div class="zone-content">
+                    <div class="zone-info">
+                        <div class="zone-item">
+                            <i class="fas fa-home"></i>
+                            <span>Cours à domicile dans la région strasbourgeoise</span>
+                        </div>
+                        <div class="zone-item">
+                            <i class="fas fa-building"></i>
+                            <span>Médiathèque André Malraux et autres bibliothèques</span>
+                        </div>
+                        <div class="zone-item">
+                            <i class="fas fa-laptop"></i>
+                            <span>Cours en ligne partout en France</span>
+                        </div>
+                    </div>
+                    
+                    <div class="zone-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43885.73289831727!2d7.717899999999999!3d48.5839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8495e18b2e1%3A0x2b1b89a8b1c34d1!2sStrassbourg%2C%20France!5e0!3m2!1sfr!2sfr!4v1703873400000!5m2!1sfr!2sfr" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Zone d'intervention Strasbourg">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Petit Prof</h3>
+                    <p>Votre partenaire pour la réussite en mathématiques et sciences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="cours-particuliers-page.html">Cours Particuliers</a></li>
+                        <li><a href="index.html#cours-en-ligne">Cours en Ligne</a></li>
+                        <li><a href="index.html#youtube">Chaîne YouTube</a></li>
+                        <li><a href="contact-page.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 t.weber.ac@gmail.com</p>
+                    <p>📱 07 45 10 66 71</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Petit Prof. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="js/pyodide-service.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/mobile-nav.js"></script>
+    <script>
+        // Configuration EmailJS
+        (function() {
+            emailjs.init("rZRIuvBhog5Bxe5tZ");
+        })();
+
+        // Script pour le formulaire de contact avec EmailJS et reCAPTCHA v3
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Désactiver le bouton pour éviter les doubles soumissions
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            
+            // Étape 1: Charger et exécuter reCAPTCHA v3 seulement lors de la soumission
+            const script = document.createElement('script');
+            script.src = 'https://www.google.com/recaptcha/api.js?render=6Ld8GsYrAAAAAI8_ELkYv536ZyoqUCxRodLlgUPe';
+            script.onload = () => {
+                grecaptcha.ready(() => {
+                    grecaptcha.execute('6Ld8GsYrAAAAAI8_ELkYv536ZyoqUCxRodLlgUPe', {action: 'contact_form'})
+                        .then(token => {
+                        // Étape 2: Récupérer les données du formulaire
+                        const formData = new FormData(this);
+                        const data = {};
+                        for (let [key, value] of formData.entries()) {
+                            data[key] = value;
+                        }
+                        
+                        // Étape 3: Préparer les données pour EmailJS
+                        const templateParams = {
+                            from_name: data.name,
+                            from_email: data.email,
+                            phone: data.phone || 'Non renseigné',
+                            subject: data.subject,
+                            level: data.level || 'Non renseigné',
+                            message: data.message,
+                            'g-recaptcha-response': token,
+                            to_email: 't.weber.ac@gmail.com'
+                        };
+                        
+                        // Étape 4: Envoyer l'email via EmailJS
+                        emailjs.send('service_ojdscgq', 'template_3uf79kd', templateParams)
+                            .then(response => {
+                                console.log('Email envoyé avec succès:', response);
+                                alert('✅ Message envoyé avec succès ! Je vous recontacterai dans les plus brefs délais.\n\n📧 t.weber.ac@gmail.com\n📱 07 45 10 66 71');
+                                this.reset();
+                            })
+                            .catch(error => {
+                                console.error('Erreur lors de l\'envoi:', error);
+                                alert('❌ Erreur lors de l\'envoi du message. Veuillez réessayer ou me contacter directement :\n\n📧 t.weber.ac@gmail.com\n📱 07 45 10 66 71');
+                            })
+                            .finally(() => {
+                                // Réactiver le bouton
+                                submitBtn.disabled = false;
+                                submitBtn.innerHTML = originalText;
+                            });
+                    })
+                    .catch(error => {
+                        console.error('Erreur reCAPTCHA:', error);
+                        alert('❌ Erreur de vérification. Veuillez réessayer.');
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalText;
+                    });
+                });
+            };
+            document.head.appendChild(script);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html> -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Calculatrice Graphique - Petit Prof | Outils Mathématiques</title>
+    <meta name="description" content="Outils et tutoriels pour la calculatrice graphique. Tracez des fonctions mathématiques avec notre calculatrice en ligne.">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/calculatrice-graphique.css">
+    
+    <link rel="stylesheet" href="./css/mobile-nav-improvements.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/course-pages.css">
+    <link rel="stylesheet" href="css/mobile-nav-improvements.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>📚 Petit Prof</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a></li>
+                <li class="nav-item dropdown">
+                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="outils-maths.html">Outils Mathématiques</a></li>
+                        <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
+                        <li><a href="seconde.html">Seconde</a></li>
+                        <li><a href="premiere-es.html">1ère ES</a></li>
+                        <li><a href="terminale-es.html">Terminale ES</a></li>
+                        <li><a href="premiere-sti2d.html">1ère STI2D</a></li>
+                        <li><a href="terminale-sti2d.html">Terminale STI2D</a></li>
+                        <li><a href="premiere-physique.html">1ère Spécialité Physique-Chimie</a></li>
+                        <li><a href="terminale-physique.html">Terminale Spécialité Physique-Chimie</a></li>
+                        <li><a href="capes.html">CAPES</a></li>
+                        <li><a href="classe-preparatoire.html">Classe préparatoire</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="youtube-page.html" class="nav-link">Chaîne YouTube</a></li>
+                <li class="nav-item dropdown">
+                    <a href="etude-fonction.html" class="nav-link">Outils Numériques <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="etude-fonction.html">Étude de Fonction</a></li>
+                        <li><a href="calculatrice-graphique.html" class="active">Calculatrice Graphique</a></li>
+                        <li><a href="convertisseur.html">Convertisseur</a></li>
+                        <li><a href="resolution-systeme.html">Résolution Système</a></li>
+                        <li><a href="courbe-tangente.html">Courbe et Tangente</a></li>
+                        <li><a href="calculatrice-numerique.html">Calculatrice Numérique</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="contact-page.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="close-icon">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de la page -->
+            <header class="page-header cours-particuliers-header" style="background-image: url('images/hero-math.avif');">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1 class="page-title">🧮 CALCULATRICE GRAPHIQUE</h1>
+                    <p class="page-subtitle">Outils et tutoriels pour la calculatrice graphique</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <div class="container">
+            <div class="graph-calc-section">
+                <h2>Calculatrice graphique :</h2>
+                <p>Indique la ou les fonctions dont tu souhaites le tracé et les informations.</p>
+                
+                <form id="graph-form">
+                    <label for="fonction1">Fonction 1 : y =</label>
+                    <input type="text" id="fonction1" name="fonction1" placeholder="ex: x^2 + 3*x - 1" required>
+                    
+                    <label for="fonction2">Fonction 2 : y =</label>
+                    <input type="text" id="fonction2" name="fonction2" placeholder="optionnelle">
+                    
+                    <label for="fonction3">Fonction 3 : y =</label>
+                    <input type="text" id="fonction3" name="fonction3" placeholder="optionnelle">
+                    
+                    <label for="fonction4">Fonction 4 : y =</label>
+                    <input type="text" id="fonction4" name="fonction4" placeholder="optionnelle">
+                    
+                    <label for="fonction5">Fonction 5 : y =</label>
+                    <input type="text" id="fonction5" name="fonction5" placeholder="optionnelle">
+                    
+                    <fieldset>
+                        <legend>Fenêtre d'affichage (optionnel)</legend>
+                        <label for="x_min">x min :</label>
+                        <input type="number" id="x_min" name="x_min" step="any" placeholder="-10">
+                        
+                        <label for="x_max">x max :</label>
+                        <input type="number" id="x_max" name="x_max" step="any" placeholder="10">
+                        
+                        <label for="y_min">y min :</label>
+                        <input type="number" id="y_min" name="y_min" step="any" placeholder="auto">
+                        
+                        <label for="y_max">y max :</label>
+                        <input type="number" id="y_max" name="y_max" step="any" placeholder="auto">
+                    </fieldset>
+                    
+                    <button type="button" id="tracer-btn">TRACER</button>
+                </form>
+            </div>
+            
+            <div id="graph-result"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Petit Prof</h3>
+                    <p>Votre partenaire pour la réussite en mathématiques et sciences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="cours-particuliers-page.html">Cours Particuliers</a></li>
+                        <li><a href="cours-en-ligne-page.html">Cours en Ligne</a></li>
+                        <li><a href="youtube-page.html">Chaîne YouTube</a></li>
+                        <li><a href="calculatrice-graphique.html">Calculatrice Graphique</a></li>
+                        <li><a href="contact-page.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 t.weber.ac@gmail.com</p>
+                    <p>📱 07 45 10 66 71</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Petit Prof. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="js/pyodide-service.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/mobile-nav.js"></script>
+    <script src="./js/calculatrice-graphique.js"></script>
+</body>
+</html>

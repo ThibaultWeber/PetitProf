@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://petit-prof.fr/</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/hero-maths.avif</image:loc>
+            <image:title>Petit Prof - Cours Particuliers</image:title>
+            <image:caption>Professeur de physique-chimie et mathématiques</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Page de contact -->
+    <url>
+        <loc>https://petit-prof.fr/contact-page.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/contact1.avif</image:loc>
+            <image:title>Contact Petit Prof</image:title>
+            <image:caption>Formulaire de contact pour les cours particuliers</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Cours particuliers -->
+    <url>
+        <loc>https://petit-prof.fr/cours-particuliers-page.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/Portrait.avif</image:loc>
+            <image:title>Cours Particuliers Petit Prof</image:title>
+            <image:caption>Professeur certifié depuis 2016</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Cours en ligne -->
+    <url>
+        <loc>https://petit-prof.fr/cours-en-ligne-page.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/hero-math.avif</image:loc>
+            <image:title>Outils Mathématiques</image:title>
+            <image:caption>Calculatrice scientifique et outils mathématiques</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Chaîne YouTube -->
+    <url>
+        <loc>https://petit-prof.fr/youtube-page.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/petitprof.avif</image:loc>
+            <image:title>Chaîne YouTube PetitProf</image:title>
+            <image:caption>Vidéos pédagogiques de physique-chimie</image:caption>
+        </image:image>
+        <video:video>
+            <video:thumbnail_loc>https://img.youtube.com/vi/OzkneemVUPY/maxresdefault.jpg</video:thumbnail_loc>
+            <video:title>Masse volumique - PetitProf</video:title>
+            <video:description>Comprendre la masse volumique en physique-chimie</video:description>
+            <video:content_loc>https://www.youtube.com/watch?v=OzkneemVUPY</video:content_loc>
+            <video:player_loc allow_embed="yes">https://www.youtube.com/embed/OzkneemVUPY</video:player_loc>
+            <video:duration>630</video:duration>
+            <video:publication_date>2024-01-15T10:00:00+00:00</video:publication_date>
+        </video:video>
+    </url>
+    
+    <!-- Pages de cours par niveau -->
+    <url>
+        <loc>https://petit-prof.fr/terminale-sti2d.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/robot.avif</image:loc>
+            <image:title>Cours Terminale STI2D</image:title>
+            <image:caption>Robot industriel pour les cours de Terminale STI2D</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/capes.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/enseignant.avif</image:loc>
+            <image:title>Préparation CAPES</image:title>
+            <image:caption>Professeur expérimenté pour la préparation au CAPES</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/terminale-physique.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/equations.avif</image:loc>
+            <image:title>Terminale Spécialité Physique-Chimie</image:title>
+            <image:caption>Formules mathématiques et équations complexes</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/premiere-physique.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/labo2.avif</image:loc>
+            <image:title>1ère Spécialité Physique-Chimie</image:title>
+            <image:caption>Laboratoire de physique-chimie moderne</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/premiere-sti2d.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/meca.avif</image:loc>
+            <image:title>1ère STI2D</image:title>
+            <image:caption>Équipements de mécanique et d'ingénierie</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/terminale-es.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/energie.avif</image:loc>
+            <image:title>Terminale ES</image:title>
+            <image:caption>Panneaux solaires et sources d'énergie renouvelable</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/premiere-es.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://petit-prof.fr/images/labo1.avif</image:loc>
+            <image:title>1ère Enseignement Scientifique</image:title>
+            <image:caption>Laboratoire de sciences avec équipements d'expérimentation</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Outils et calculatrices -->
+    <url>
+        <loc>https://petit-prof.fr/calculatrice-graphique.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/calculatrice-numerique.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/convertisseur.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/courbe-tangente.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/etude-fonction.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/resolution-systeme.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://petit-prof.fr/simple-math-system.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+</urlset>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Calculatrice Numérique - Petit Prof | Outils Mathématiques</title>
+    <meta name="description" content="Calculatrice scientifique complète avec fonctions trigonométriques, logarithmes et notation scientifique.">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/course-pages.css">
+    <link rel="stylesheet" href="css/calculatrice-numerique.css">
+    <link rel="stylesheet" href="css/mobile-nav-improvements.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>📚 Petit Prof</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a></li>
+                <li class="nav-item dropdown">
+                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="outils-maths.html">Outils Mathématiques</a></li>
+                        <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
+                        <li><a href="seconde.html">Seconde</a></li>
+                        <li><a href="premiere-es.html">1ère ES</a></li>
+                        <li><a href="terminale-es.html">Terminale ES</a></li>
+                        <li><a href="premiere-sti2d.html">1ère STI2D</a></li>
+                        <li><a href="terminale-sti2d.html">Terminale STI2D</a></li>
+                        <li><a href="premiere-physique.html">1ère Spécialité Physique-Chimie</a></li>
+                        <li><a href="terminale-physique.html">Terminale Spécialité Physique-Chimie</a></li>
+                        <li><a href="capes.html">CAPES</a></li>
+                        <li><a href="classe-preparatoire.html">Classe préparatoire</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="youtube-page.html" class="nav-link">Chaîne YouTube</a></li>
+                <li class="nav-item dropdown">
+                    <a href="etude-fonction.html" class="nav-link">Outils Numériques <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="etude-fonction.html">Étude de Fonction</a></li>
+                        <li><a href="calculatrice-graphique.html">Calculatrice Graphique</a></li>
+                        <li><a href="convertisseur.html">Convertisseur</a></li>
+                        <li><a href="resolution-systeme.html">Résolution Système</a></li>
+                        <li><a href="courbe-tangente.html">Courbe et Tangente</a></li>
+                        <li><a href="calculatrice-numerique.html" class="active">Calculatrice Numérique</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="contact-page.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="close-icon">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de la page -->
+    <header class="page-header course-header" style="background-image: url('images/hero-math.avif');">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1 class="page-title">🧮 CALCULATRICE NUMÉRIQUE</h1>
+                    <p class="page-subtitle">Calculatrice scientifique complète avec toutes les fonctions avancées</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <div class="container">
+            <!-- Section de la calculatrice -->
+            <div class="calculator-section">
+                <h2>🧮 Calculatrice Scientifique</h2>
+                <p>Utilisez cette calculatrice pour tous vos calculs mathématiques avec fonctions trigonométriques, logarithmes et notation scientifique.</p>
+                
+                <!-- Calculatrice -->
+                <div class="calculator-container">
+                    <!-- Écran de la calculatrice -->
+                    <div class="calculator-screen">
+                        <div class="screen-display">
+                            <div class="display-line" id="display-expression">0</div>
+                            <div class="display-line result-line" id="display-result"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Boutons de la calculatrice -->
+                    <div class="calculator-buttons">
+                        <!-- Ligne 1 : OFF | Math/Sci | Deg/Rad | ( | ) | π -->
+                        <button class="calc-btn function-btn" data-function="off">OFF</button>
+                        <button class="calc-btn function-btn math-sci-btn" data-function="mathSci">
+                            <div class="button-text">Math/Sci</div>
+                            <div class="button-indicator" id="math-sci-indicator">NORM</div>
+                        </button>
+                        <button class="calc-btn function-btn angle-btn" data-function="angleMode">
+                            <div class="button-text">Deg/Rad</div>
+                            <div class="button-indicator" id="angle-indicator">DEG</div>
+                        </button>
+                        <button class="calc-btn function-btn" data-function="openParentheses">(</button>
+                        <button class="calc-btn function-btn" data-function="closeParentheses">)</button>
+                        <button class="calc-btn function-btn" data-function="pi">π</button>
+                        
+                        <!-- Ligne 2 : Arcsin | Arccos | Arctan | Ash | Ach | Ath -->
+                        <button class="calc-btn function-btn" data-function="asin">Arcsin</button>
+                        <button class="calc-btn function-btn" data-function="acos">Arccos</button>
+                        <button class="calc-btn function-btn" data-function="atan">Arctan</button>
+                        <button class="calc-btn function-btn" data-function="asinh">Ash</button>
+                        <button class="calc-btn function-btn" data-function="acosh">Ach</button>
+                        <button class="calc-btn function-btn" data-function="atanh">Ath</button>
+                        
+                        <!-- Ligne 3 : sin | cos | tan | sh | ch | th -->
+                        <button class="calc-btn function-btn" data-function="sin">sin</button>
+                        <button class="calc-btn function-btn" data-function="cos">cos</button>
+                        <button class="calc-btn function-btn" data-function="tan">tan</button>
+                        <button class="calc-btn function-btn" data-function="sinh">sh</button>
+                        <button class="calc-btn function-btn" data-function="cosh">ch</button>
+                        <button class="calc-btn function-btn" data-function="tanh">th</button>
+                        
+                        <!-- Ligne 4 : e^x | ln | log₁₀ | e | n! | |x| -->
+                        <button class="calc-btn function-btn" data-function="exp">e<sup>x</sup></button>
+                        <button class="calc-btn function-btn" data-function="ln">ln</button>
+                        <button class="calc-btn function-btn" data-function="log10">log₁₀</button>
+                        <button class="calc-btn function-btn" data-function="e">e</button>
+                        <button class="calc-btn function-btn" data-function="factorial">n!</button>
+                        <button class="calc-btn function-btn" data-function="abs">|x|</button>
+                        
+                        <!-- Ligne 5 : 7 | 8 | 9 | ⌫ | ^ | C -->
+                        <button class="calc-btn number-btn" data-number="7">7</button>
+                        <button class="calc-btn number-btn" data-number="8">8</button>
+                        <button class="calc-btn number-btn" data-number="9">9</button>
+                        <button class="calc-btn function-btn" data-function="delete">⌫</button>
+                        <button class="calc-btn operator-btn" data-operator="^">^</button>
+                        <button class="calc-btn function-btn" data-function="clear">C</button>
+                        
+                        <!-- Ligne 6 : 4 | 5 | 6 | × | ÷ | √ -->
+                        <button class="calc-btn number-btn" data-number="4">4</button>
+                        <button class="calc-btn number-btn" data-number="5">5</button>
+                        <button class="calc-btn number-btn" data-number="6">6</button>
+                        <button class="calc-btn operator-btn" data-operator="*">×</button>
+                        <button class="calc-btn operator-btn" data-operator="/">÷</button>
+                        <button class="calc-btn function-btn" data-function="sqrt">√</button>
+                        
+                        <!-- Ligne 7 : 1 | 2 | 3 | + | - | 1/x -->
+                        <button class="calc-btn number-btn" data-number="1">1</button>
+                        <button class="calc-btn number-btn" data-number="2">2</button>
+                        <button class="calc-btn number-btn" data-number="3">3</button>
+                        <button class="calc-btn operator-btn" data-operator="+">+</button>
+                        <button class="calc-btn operator-btn" data-operator="-">-</button>
+                        <button class="calc-btn function-btn" data-function="inverse">1/x</button>
+                        
+                        <!-- Ligne 8 : 0 | . | ×10ˣ | (-) | Ans | = -->
+                        <button class="calc-btn number-btn" data-number="0">0</button>
+                        <button class="calc-btn number-btn" data-number=".">.</button>
+                        <button class="calc-btn function-btn" data-function="power10">×10ˣ</button>
+                        <button class="calc-btn function-btn" data-function="negate">(-)</button>
+                        <button class="calc-btn function-btn" data-function="ans">Ans</button>
+                        <button class="calc-btn function-btn" data-function="equals">=</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section d'aide -->
+            <div class="help-section">
+                <h2>💡 Guide d'utilisation</h2>
+                <div class="help-content">
+                    <div class="help-category">
+                        <h3>🔢 Fonctions de base</h3>
+                        <ul>
+                            <li><strong>Chiffres 0-9 :</strong> Saisie des nombres</li>
+                            <li><strong>Opérateurs :</strong> +, -, ×, ÷ pour les opérations de base</li>
+                            <li><strong>Puissance :</strong> ^ pour élever à une puissance</li>
+                            <li><strong>Virgule :</strong> . pour les nombres décimaux</li>
+                        </ul>
+                    </div>
+                    <div class="help-category">
+                        <h3>📐 Fonctions trigonométriques</h3>
+                        <ul>
+                            <li><strong>sin, cos, tan :</strong> Fonctions trigonométriques de base</li>
+                            <li><strong>Arcsin, Arccos, Arctan :</strong> Fonctions trigonométriques inverses</li>
+                            <li><strong>sh, ch, th :</strong> Fonctions hyperboliques</li>
+                            <li><strong>Ash, Ach, Ath :</strong> Fonctions hyperboliques inverses</li>
+                        </ul>
+                    </div>
+                    <div class="help-category">
+                        <h3>📊 Fonctions avancées</h3>
+                        <ul>
+                            <li><strong>ln :</strong> Logarithme népérien (base e)</li>
+                            <li><strong>log₁₀ :</strong> Logarithme en base 10</li>
+                            <li><strong>e^x :</strong> Exponentielle</li>
+                            <li><strong>×10^x :</strong> Notation scientifique</li>
+                        </ul>
+                    </div>
+                    <div class="help-category">
+                        <h3>🎛️ Contrôles</h3>
+                        <ul>
+                            <li><strong>Maths :</strong> Mode écriture mathématique (orange quand activé)</li>
+                            <li><strong>Sci :</strong> Mode notation scientifique (orange quand activé)</li>
+                            <li><strong>⌫ :</strong> Supprimer le dernier caractère</li>
+                            <li><strong>C :</strong> Effacer tout</li>
+                            <li><strong>OFF :</strong> Réinitialiser la calculatrice</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Petit Prof</h3>
+                    <p>Votre partenaire pour la réussite en mathématiques et sciences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="cours-particuliers-page.html">Cours Particuliers</a></li>
+                        <li><a href="cours-en-ligne-page.html">Cours en Ligne</a></li>
+                        <li><a href="youtube-page.html">Chaîne YouTube</a></li>
+                        <li><a href="calculatrice-graphique.html">Calculatrice Graphique</a></li>
+                        <li><a href="convertisseur.html">Convertisseur</a></li>
+                        <li><a href="resolution-systeme.html">Résolution Système</a></li>
+                        <li><a href="calculatrice-numerique.html">Calculatrice Numérique</a></li>
+                        <li><a href="contact-page.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 t.weber.ac@gmail.com</p>
+                    <p>📱 07 45 10 66 71</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Petit Prof. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="js/pyodide-service.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/mobile-nav.js"></script>
+    <script src="./js/calculatrice-numerique.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+{
+  "name": "Petit Prof - Cours Particuliers et Ressources Pédagogiques",
+  "short_name": "PetitProf",
+  "description": "Site de cours particuliers et ressources pédagogiques en physique-chimie et mathématiques pour tous les niveaux",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr",
+  "dir": "ltr",
+  "categories": ["education", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/images/petitprof-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/petitprof-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/petitprof-192.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/petitprof-512.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Page d'accueil - Version desktop"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Page d'accueil - Version mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Cours Particuliers",
+      "short_name": "Cours",
+      "description": "Découvrir les cours particuliers",
+      "url": "/cours-particuliers-page.html",
+      "icons": [
+        {
+          "src": "/images/icon-cours-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Chaîne YouTube",
+      "short_name": "YouTube",
+      "description": "Voir les vidéos pédagogiques",
+      "url": "/youtube-page.html",
+      "icons": [
+        {
+          "src": "/images/icon-youtube-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Nous contacter",
+      "url": "/contact-page.html",
+      "icons": [
+        {
+          "src": "/images/icon-contact-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Calculatrice Graphique",
+      "short_name": "Calculatrice",
+      "description": "Outil de calcul graphique",
+      "url": "/calculatrice-graphique.html",
+      "icons": [
+        {
+          "src": "/images/icon-calculatrice-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://petit-prof.fr/manifest.json"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "file_handlers": [
+    {
+      "action": "/calculatrice-graphique.html",
+      "accept": {
+        "text/plain": [".txt"],
+        "application/json": [".json"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+petitprof",
+      "url": "/?action=%s"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Étude de Fonction - Petit Prof | Outils Mathématiques</title>
+    <meta name="description" content="Outil d'étude de fonction complet : tracé, dérivée, primitive, tableau de variation et analyse mathématique.">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/etude-fonction.css">
+    
+    <link rel="stylesheet" href="./css/mobile-nav-improvements.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Math.js pour les calculs analytiques -->
+    <script src="js/math.min.js"></script>
+    
+    <!-- Nerdamer pour les calculs symboliques avancés -->
+    <script src="https://unpkg.com/nerdamer@1.1.12/nerdamer.core.js"></script>
+    <script src="https://unpkg.com/nerdamer@1.1.12/Algebra.js"></script>
+    <script src="https://unpkg.com/nerdamer@1.1.12/Calculus.js"></script>
+    <script src="https://unpkg.com/nerdamer@1.1.12/Solve.js"></script>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/course-pages.css">
+    <link rel="stylesheet" href="css/mobile-nav-improvements.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>📚 Petit Prof</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="outils-maths.html">Outils Mathématiques</a></li>
+                        <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
+                        <li><a href="seconde.html">Seconde</a></li>
+                        <li><a href="premiere-es.html">1ère ES</a></li>
+                        <li><a href="terminale-es.html">Terminale ES</a></li>
+                        <li><a href="premiere-sti2d.html">1ère STI2D</a></li>
+                        <li><a href="terminale-sti2d.html">Terminale STI2D</a></li>
+                        <li><a href="premiere-physique.html">1ère Spécialité Physique-Chimie</a></li>
+                        <li><a href="terminale-physique.html">Terminale Spécialité Physique-Chimie</a></li>
+                        <li><a href="capes.html">CAPES</a></li>
+                        <li><a href="classe-preparatoire.html">Classe préparatoire</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="youtube-page.html" class="nav-link">Chaîne YouTube</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="etude-fonction.html" class="nav-link">Outils Numériques <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="etude-fonction.html" class="active">Étude de Fonction</a></li>
+                        <li><a href="calculatrice-graphique.html">Calculatrice Graphique</a></li>
+                        <li><a href="convertisseur.html">Convertisseur</a></li>
+                        <li><a href="resolution-systeme.html">Résolution Système</a></li>
+                        <li><a href="courbe-tangente.html">Courbe et Tangente</a></li>
+                        <li><a href="calculatrice-numerique.html">Calculatrice Numérique</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="contact-page.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="close-icon">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de la page -->
+    <header class="page-header cours-particuliers-header" style="background-image: url('images/hero-math.avif');">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1 class="page-title">📈 ÉTUDE DE FONCTION</h1>
+                    <p class="page-subtitle">Analyse complète de fonction : tracé, dérivée, primitive et variations</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <div class="container">
+            <!-- Section de saisie -->
+            <div class="function-input-section">
+                <h2>Analyse de fonction</h2>
+                <p>Indique la fonction que tu souhaites tracer et étudier :</p>
+                
+                <form id="function-form">
+                    <div class="input-group">
+                        <label for="function-input">y =</label>
+                        <input type="text" id="function-input" name="function" placeholder="ex: x^2 + 3*x - 1" required>
+                        <button type="submit" id="trace-btn">
+                            <i class="fas fa-chart-line"></i> Tracer la courbe
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Section du graphique -->
+            <div class="graph-section">
+                <div class="graph-container">
+                    <div class="graph-controls">
+                        <button id="zoom-in" class="control-btn" title="Zoomer">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button id="zoom-out" class="control-btn" title="Dézoomer">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <button id="reset-view" class="control-btn" title="Vue par défaut">
+                            <i class="fas fa-home"></i>
+                        </button>
+                    </div>
+                    <canvas id="function-canvas" width="800" height="600"></canvas>
+                    <div id="coordinates-display" class="coordinates-display">
+                        <span id="mouse-coords">x: 0, y: 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section d'analyse -->
+            <div class="analysis-section" id="analysis-section" style="display: none;">
+                
+                <!-- Affichage de la fonction -->
+                <div class="analysis-card">
+                    <h3>🎯 Fonction étudiée</h3>
+                    <div id="function-display" class="result-content"></div>
+                </div>
+                
+                <h2>Analyse de la fonction</h2>
+                
+                <!-- Domaine de définition -->
+                <div class="analysis-card" style="margin-bottom: 20px !important;">
+                    <h3><i class="fas fa-globe"></i> Domaine de définition</h3>
+                    <div id="domain-result" class="result-content"></div>
+                </div>
+                
+                <!-- Périodicité -->
+                <div class="analysis-card" style="margin-bottom: 20px !important;">
+                    <h3><i class="fas fa-sync-alt"></i> Périodicité</h3>
+                    <div id="periodicity-result" class="result-content"></div>
+                </div>
+                
+                <!-- Dérivée première -->
+                <div class="analysis-card" style="margin-bottom: 20px !important;">
+                    <h3><i class="fas fa-calculator"></i> Dérivée première</h3>
+                    <div id="derivative-result" class="result-content"></div>
+                </div>
+                
+                <!-- Dérivée seconde -->
+                <div class="analysis-card" style="margin-bottom: 20px !important;">
+                    <h3><i class="fas fa-calculator"></i> Dérivée seconde</h3>
+                    <div id="second-derivative-result" class="result-content"></div>
+                </div>
+                
+                <!-- Primitive -->
+                <div class="analysis-card" style="margin-bottom: 20px !important;">
+                    <h3><i class="fas fa-integral"></i> Primitive</h3>
+                    <div id="primitive-result" class="result-content"></div>
+                </div>
+                
+                <!-- Zéros -->
+                <div class="analysis-card" style="margin-bottom: 20px !important;">
+                    <h3><i class="fas fa-crosshairs"></i> Zéros de la fonction</h3>
+                    <div id="zeros-result" class="result-content"></div>
+                </div>
+                
+                <!-- Extremums -->
+                <div class="analysis-card" style="margin-bottom: 20px !important;">
+                    <h3><i class="fas fa-mountain"></i> Extremums de la fonction</h3>
+                    <div id="extremums-result" class="result-content"></div>
+                </div>
+
+                <!-- Tableau de valeurs -->
+                <div class="analysis-card" style="margin-bottom: 20px !important;">
+                    <h3><i class="fas fa-table"></i> Tableau de valeurs</h3>
+                    <div id="values-table-result" class="result-content">
+                        <div class="values-table-container">
+                            <table id="values-table" class="values-table">
+                                <thead>
+                                    <tr id="values-x-row"></tr>
+                                    <tr id="values-y-row"></tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tableau de signe -->
+                <div class="analysis-card" style="margin-bottom: 20px !important;">
+                    <h3><i class="fas fa-plus-minus"></i> Tableau de signe</h3>
+                    <div id="sign-table" class="result-content"></div>
+                </div>
+                
+                <!-- Tableau de variation -->
+                <div class="analysis-card" style="margin-bottom: 0 !important;">
+                    <h3><i class="fas fa-chart-bar"></i> Tableau de variation</h3>
+                    <div id="variation-table" class="result-content"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Petit Prof</h3>
+                    <p>Votre partenaire pour la réussite en mathématiques et sciences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="cours-particuliers-page.html">Cours Particuliers</a></li>
+                        <li><a href="cours-en-ligne-page.html">Cours en Ligne</a></li>
+                        <li><a href="youtube-page.html">Chaîne YouTube</a></li>
+                        <li><a href="etude-fonction.html">Étude de Fonction</a></li>
+                        <li><a href="contact-page.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 t.weber.ac@gmail.com</p>
+                    <p>📱 07 45 10 66 71</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 par Petit Prof. Site créé avec ❤️ et du code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="js/pyodide-service.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/mobile-nav.js"></script>
+    <script src="js/etude-fonction.js"></script>
+</body>
+</html>

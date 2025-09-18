@@ -1,0 +1,240 @@
+<!-- <!DOCTYPE html> -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Résolution Système - Petit Prof | Outils Mathématiques</title>
+    <meta name="description" content="Résolvez des systèmes de deux polynômes du 2ème degré avec notre outil en ligne. Méthodes par substitution et combinaison.">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/resolution-systeme.css">
+    
+    <link rel="stylesheet" href="./css/mobile-nav-improvements.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/course-pages.css">
+    <link rel="stylesheet" href="css/mobile-nav-improvements.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>📚 Petit Prof</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a></li>
+                <li class="nav-item dropdown">
+                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="outils-maths.html">Outils Mathématiques</a></li>
+                        <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
+                        <li><a href="seconde.html">Seconde</a></li>
+                        <li><a href="premiere-es.html">1ère ES</a></li>
+                        <li><a href="terminale-es.html">Terminale ES</a></li>
+                        <li><a href="premiere-sti2d.html">1ère STI2D</a></li>
+                        <li><a href="terminale-sti2d.html">Terminale STI2D</a></li>
+                        <li><a href="premiere-physique.html">1ère Spécialité Physique-Chimie</a></li>
+                        <li><a href="terminale-physique.html">Terminale Spécialité Physique-Chimie</a></li>
+                        <li><a href="capes.html">CAPES</a></li>
+                        <li><a href="classe-preparatoire.html">Classe préparatoire</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="youtube-page.html" class="nav-link">Chaîne YouTube</a></li>
+                <li class="nav-item dropdown">
+                    <a href="calculatrice-graphique.html" class="nav-link">Outils Numériques <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="calculatrice-graphique.html">Calculatrice Graphique</a></li>
+                        <li><a href="convertisseur.html">Convertisseur</a></li>
+                        <li><a href="resolution-systeme.html" class="active">Résolution Système</a></li>
+                        <li><a href="courbe-tangente.html">Courbe et Tangente</a></li>
+                        <li><a href="calculatrice-numerique.html">Calculatrice Numérique</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="contact-page.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="close-icon">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de la page -->
+    <header class="page-header cours-particuliers-header" style="background-image: url('images/hero-math.avif');">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1 class="page-title">🔢 RÉSOLUTION D'UN SYSTÈME DE DEUX POLYNÔMES</h1>
+                    <p class="page-subtitle">Résolvez des systèmes d'équations du 2ème degré avec précision</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <div class="container">
+            <!-- Section d'explication -->
+            <div class="explanation-section">
+                <h2>📚 Comprendre les systèmes d'équations</h2>
+                <div class="explanation-content">
+                    <div class="concept-explanation">
+                        <h3>🔍 Qu'est-ce qu'un système d'équations ?</h3>
+                        <p>Un système d'équations est un ensemble de plusieurs équations qui doivent être satisfaites simultanément. Résoudre un système consiste à trouver toutes les valeurs des inconnues qui vérifient toutes les équations du système en même temps.</p>
+                    </div>
+                    <div class="methods-explanation">
+                        <h3>⚙️ Méthodes de résolution</h3>
+                        <div class="method-card">
+                            <h4>🔄 Méthode par substitution</h4>
+                            <p>On exprime une inconnue en fonction de l'autre dans une équation, puis on substitue cette expression dans l'autre équation.</p>
+                        </div>
+                        <div class="method-card">
+                            <h4>➕ Méthode par combinaison</h4>
+                            <p>On combine les équations (addition, soustraction) pour éliminer une inconnue et obtenir une équation à une seule inconnue.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section de résolution -->
+            <div class="solver-section">
+                <h2>🔢 Résolveur de système</h2>
+                <p>Entrez les coefficients de vos polynômes du 2ème degré pour obtenir les solutions du système.</p>
+                
+                <!-- Affichage du système -->
+                <div class="system-display">
+                    <h3>Système à résoudre :</h3>
+                    <div class="equations">
+                        <div class="equation">
+                            <span id="equation1">ax² + bx + c = 0</span>
+                        </div>
+                        <div class="equation">
+                            <span id="equation2">dx² + ex + f = 0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="solver-form">
+                    <div class="coefficients-section">
+                        <h3>Sélectionner les coefficients des polynômes :</h3>
+                        
+                        <div class="coefficients-group">
+                            <h4>Premier polynôme : ax² + bx + c = 0</h4>
+                            <div class="coefficients-row">
+                                <div class="coefficient-input">
+                                    <label for="coeff-a">a =</label>
+                                    <input type="number" id="coeff-a" name="a" step="any" placeholder="0" value="1">
+                                </div>
+                                <div class="coefficient-input">
+                                    <label for="coeff-b">b =</label>
+                                    <input type="number" id="coeff-b" name="b" step="any" placeholder="0" value="1">
+                                </div>
+                                <div class="coefficient-input">
+                                    <label for="coeff-c">c =</label>
+                                    <input type="number" id="coeff-c" name="c" step="any" placeholder="0" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="coefficients-group">
+                            <h4>Deuxième polynôme : dx² + ex + f = 0</h4>
+                            <div class="coefficients-row">
+                                <div class="coefficient-input">
+                                    <label for="coeff-d">d =</label>
+                                    <input type="number" id="coeff-d" name="d" step="any" placeholder="0" value="1">
+                                </div>
+                                <div class="coefficient-input">
+                                    <label for="coeff-e">e =</label>
+                                    <input type="number" id="coeff-e" name="e" step="any" placeholder="0" value="1">
+                                </div>
+                                <div class="coefficient-input">
+                                    <label for="coeff-f">f =</label>
+                                    <input type="number" id="coeff-f" name="f" step="any" placeholder="0" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" id="solve-btn">RÉSOUDRE LE SYSTÈME</button>
+                </form>
+                
+                <div id="solution-result"></div>
+            </div>
+
+            <!-- Section d'exemples -->
+            <div class="examples-section">
+                <h2>💡 Exemples de systèmes</h2>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <h4>Système linéaire</h4>
+                        <p><strong>x² - 1 = 0</strong><br><strong>x² - 4 = 0</strong></p>
+                        <p>Solutions : x = ±1 et x = ±2</p>
+                    </div>
+                    <div class="example-card">
+                        <h4>Système avec intersection</h4>
+                        <p><strong>x² + x - 2 = 0</strong><br><strong>x² - x - 2 = 0</strong></p>
+                        <p>Solutions communes : x = 2</p>
+                    </div>
+                    <div class="example-card">
+                        <h4>Système sans solution</h4>
+                        <p><strong>x² + 1 = 0</strong><br><strong>x² + 4 = 0</strong></p>
+                        <p>Aucune solution réelle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Petit Prof</h3>
+                    <p>Votre partenaire pour la réussite en mathématiques et sciences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="cours-particuliers-page.html">Cours Particuliers</a></li>
+                        <li><a href="cours-en-ligne-page.html">Cours en Ligne</a></li>
+                        <li><a href="youtube-page.html">Chaîne YouTube</a></li>
+                        <li><a href="calculatrice-graphique.html">Calculatrice Graphique</a></li>
+                        <li><a href="convertisseur.html">Convertisseur</a></li>
+                        <li><a href="resolution-systeme.html">Résolution Système</a></li>
+                        <li><a href="contact-page.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 t.weber.ac@gmail.com</p>
+                    <p>📱 07 45 10 66 71</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Petit Prof. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="js/pyodide-service.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/mobile-nav.js"></script>
+    <script src="./js/resolution-systeme.js"></script>
+</body>
+</html>

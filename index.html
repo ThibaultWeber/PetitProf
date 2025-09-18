@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Petit Prof - Cours Particuliers et Ressources Pédagogiques</title>
+    <meta name="description" content="Professeur de soutien pour tous. Cours particuliers, ressources pédagogiques et vidéos YouTube pour progresser en sciences.">
+    <meta name="keywords" content="cours particuliers, physique, chimie, mathématiques, Strasbourg, professeur, soutien scolaire, Seconde, Première, Terminale, CAPES, classe préparatoire, Petit Prof, Thibault Weber, YouTube, vidéos pédagogiques">
+    <link rel="canonical" href="https://petit-prof.fr/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/course-pages.css">
+    <link rel="stylesheet" href="css/mobile-nav-improvements.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- reCAPTCHA v3 - chargé seulement lors de la soumission -->
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="application-name" content="Petit Prof">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Petit Prof">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/images/petitprof-192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/petitprof-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/petitprof-180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/petitprof-167.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://petit-prof.fr/#person",
+                "name": "Petit Prof",
+                "alternateName": "Thibault Weber",
+                "jobTitle": "Professeur de Physique-Chimie et Mathématiques",
+                "description": "Professeur de soutien pour tous. Cours particuliers, ressources pédagogiques et vidéos YouTube pour progresser en sciences.",
+                "email": "t.weber.ac@gmail.com",
+                "telephone": "07 45 10 66 71",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Strasbourg",
+                    "addressRegion": "Grand Est",
+                    "addressCountry": "FR"
+                },
+                "url": "https://petit-prof.fr",
+                "sameAs": [
+                    "https://www.youtube.com/@PetitProf67"
+                ],
+                "knowsAbout": [
+                    "Physique-Chimie",
+                    "Mathématiques",
+                    "Cours particuliers",
+                    "Enseignement",
+                    "Pédagogie"
+                ],
+                "hasOccupation": {
+                    "@type": "Occupation",
+                    "name": "Professeur particulier",
+                    "occupationLocation": {
+                        "@type": "City",
+                        "name": "Strasbourg"
+                    }
+                }
+            },
+            {
+                "@type": "EducationalOrganization",
+                "@id": "https://petit-prof.fr/#organization",
+                "name": "Petit Prof",
+                "alternateName": "Cours Particuliers Petit Prof",
+                "description": "Organisation proposant des cours particuliers et ressources pédagogiques en physique-chimie et mathématiques",
+                "url": "https://petit-prof.fr",
+                "founder": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "07 45 10 66 71",
+                    "contactType": "customer service",
+                    "email": "t.weber.ac@gmail.com",
+                    "availableLanguage": "French",
+                    "areaServed": "FR"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Strasbourg",
+                    "addressRegion": "Grand Est",
+                    "addressCountry": "FR"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://petit-prof.fr/#website",
+                "name": "Petit Prof - Cours Particuliers et Ressources Pédagogiques",
+                "url": "https://petit-prof.fr",
+                "description": "Site de cours particuliers et ressources pédagogiques en physique-chimie et mathématiques pour tous les niveaux",
+                "publisher": {
+                    "@id": "https://petit-prof.fr/#organization"
+                },
+                "author": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "inLanguage": "fr-FR",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://petit-prof.fr/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "Course",
+                "@id": "https://petit-prof.fr/#course",
+                "name": "Cours Particuliers de Physique-Chimie et Mathématiques",
+                "description": "Cours particuliers adaptés aux besoins de chaque élève pour rattraper un retard, préparer un examen, approfondir certaines notions ou acquérir une méthodologie de travail",
+                "provider": {
+                    "@id": "https://petit-prof.fr/#organization"
+                },
+                "instructor": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "courseMode": ["online", "offline"],
+                "educationalLevel": [
+                    "Seconde",
+                    "Première ES",
+                    "Première STI2D", 
+                    "Première Spécialité Physique-Chimie",
+                    "Terminale ES",
+                    "Terminale STI2D",
+                    "Terminale Spécialité Physique-Chimie",
+                    "CAPES",
+                    "Classe Préparatoire"
+                ],
+                "inLanguage": "fr-FR",
+                "offers": {
+                    "@type": "Offer",
+                    "description": "Cours particuliers personnalisés",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-01-01"
+                }
+            },
+            {
+                "@type": "VideoObject",
+                "@id": "https://petit-prof.fr/#video-masse-volumique",
+                "name": "Masse volumique - PetitProf",
+                "description": "Comprendre la masse volumique en physique-chimie",
+                "thumbnailUrl": "https://img.youtube.com/vi/OzkneemVUPY/maxresdefault.jpg",
+                "uploadDate": "2024-01-15",
+                "duration": "PT10M30S",
+                "embedUrl": "https://www.youtube.com/embed/OzkneemVUPY",
+                "publisher": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "creator": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "inLanguage": "fr-FR"
+            },
+            {
+                "@type": "VideoObject",
+                "@id": "https://petit-prof.fr/#video-quantite-matiere",
+                "name": "Quantité de matière - PetitProf",
+                "description": "Les bases de la quantité de matière en chimie",
+                "thumbnailUrl": "https://img.youtube.com/vi/oHidTonrXGI/maxresdefault.jpg",
+                "uploadDate": "2024-01-20",
+                "duration": "PT12M15S",
+                "embedUrl": "https://www.youtube.com/embed/oHidTonrXGI",
+                "publisher": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "creator": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "inLanguage": "fr-FR"
+            },
+            {
+                "@type": "VideoObject",
+                "@id": "https://petit-prof.fr/#video-schema-lewis",
+                "name": "Schéma de Lewis des molécules - PetitProf",
+                "description": "Apprendre à dessiner les schémas de Lewis",
+                "thumbnailUrl": "https://img.youtube.com/vi/JFILNmJsu_I/maxresdefault.jpg",
+                "uploadDate": "2024-01-25",
+                "duration": "PT15M45S",
+                "embedUrl": "https://www.youtube.com/embed/JFILNmJsu_I",
+                "publisher": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "creator": {
+                    "@id": "https://petit-prof.fr/#person"
+                },
+                "inLanguage": "fr-FR"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">Petit Prof</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cours-particuliers-page.html" class="nav-link">Cours Particuliers</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="cours-en-ligne-page.html" class="nav-link">Cours en ligne <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="outils-maths.html">Outils Mathématiques</a></li>
+                        <li><a href="fiches-methodes.html">Fiches Méthodes</a></li>
+                        <li><a href="seconde.html">Seconde</a></li>
+                        <li><a href="premiere-es.html">1ère ES</a></li>
+                        <li><a href="terminale-es.html">Terminale ES</a></li>
+                        <li><a href="premiere-sti2d.html">1ère STI2D</a></li>
+                        <li><a href="terminale-sti2d.html">Terminale STI2D</a></li>
+                        <li><a href="premiere-physique.html">1ère Spécialité Physique-Chimie</a></li>
+                        <li><a href="terminale-physique.html">Terminale Spécialité Physique-Chimie</a></li>
+                        <li><a href="capes.html">CAPES</a></li>
+                        <li><a href="classe-preparatoire.html">Classe préparatoire</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="youtube-page.html" class="nav-link">Chaîne YouTube</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="etude-fonction.html" class="nav-link">Outils Numériques <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="etude-fonction.html">Étude de Fonction</a></li>
+                        <li><a href="calculatrice-graphique.html">Calculatrice Graphique</a></li>
+                        <li><a href="convertisseur.html">Convertisseur</a></li>
+                        <li><a href="resolution-systeme.html">Résolution Système</a></li>
+                        <li><a href="courbe-tangente.html">Courbe et Tangente</a></li>
+                        <li><a href="calculatrice-numerique.html">Calculatrice Numérique</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="contact-page.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="close-icon">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero" style="background-image: url('./images/hero-maths.avif');">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Bienvenue sur le site de Petit Prof</h1>
+                <p class="hero-subtitle">Un professeur de soutien pour tous à Strasbourg et en visio</p>
+                <br>
+                <p class="hero-description">
+                    Apprentissage, Méthode, Progrès.
+                </p>
+                <div class="hero-buttons">
+                    <a href="cours-particuliers-page.html" class="btn btn-primary">Cours Particuliers</a>
+                    <a href="youtube-page.html" class="btn btn-secondary">Voir les Vidéos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Présentation -->
+    <section id="presentation" class="presentation">
+        <div class="container">
+            <h2 class="section-title">PRÉSENTATION</h2>
+            <div class="presentation-content">
+                <div class="presentation-text">
+                    <p>
+                        L'objectif de ce site est double : présenter les contenus pédagogiques que j'utilise en classe avec mes élèves, et les mettre à disposition de tous ceux qui, par curiosité, cherchent à en apprendre davantage en ligne.
+                    </p>
+                    <p>
+                        Afin de partager les sciences avec le plus grand nombre, j'ai rapidement élargi mon approche en créant des vidéos pédagogiques sur ma chaîne YouTube, également accessible depuis ce site.
+                    </p>
+                    <p>
+                        Enfin, ce site constitue aussi une vitrine pour mon activité de professeur particulier, que je propose aussi bien en ligne qu'en présentiel.
+                    </p>
+                </div>
+                <div class="presentation-image">
+                    <picture>
+            <source type="image/avif" srcset="images/chimie_small.avif 192w, images/chimie_medium.avif 384w, images/chimie_large.avif 768w, images/chimie_xlarge.avif 1200w, images/chimie_xxlarge.avif 1920w">
+            <source type="image/webp" srcset="images/chimie_small.webp 192w, images/chimie_medium.webp 384w, images/chimie_large.webp 768w, images/chimie_xlarge.webp 1200w, images/chimie_xxlarge.webp 1920w">
+            <img loading="lazy" decoding="async" src="./images/chimie.webp" alt="[existing]" longdesc="#chimie-desc" class="presentation-img" onerror="this.src='./images/chimie.jpg'">
+        </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Cours Particuliers -->
+    <section id="cours-particuliers" class="cours-particuliers">
+        <div class="container">
+            <h2 class="section-title">COURS PARTICULIERS</h2>
+            <div class="cours-content">
+                <div class="cours-text">
+                    <h3>Un accompagnement personnalisé</h3>
+                    <p>
+                        Je propose des cours particuliers adaptés aux besoins de chaque élève, que ce soit pour :
+                    </p>
+                    <ul class="cours-list">
+                        <li><i class="fas fa-check"></i> Rattraper un retard</li>
+                        <li><i class="fas fa-check"></i> Préparer un examen</li>
+                        <li><i class="fas fa-check"></i> Approfondir certaines notions</li>
+                        <li><i class="fas fa-check"></i> Acquérir une méthodologie de travail</li>
+                    </ul>
+                    <div class="cours-buttons">
+                        <a href="cours-particuliers-page.html" class="btn btn-primary">En savoir plus</a>
+                        <a href="contact-page.html" class="btn btn-secondary">Demander un cours</a>
+                    </div>
+                </div>
+                <div class="cours-image">
+                    <picture>
+            <source type="image/avif" srcset="images/groupe_small.avif 192w, images/groupe_medium.avif 384w, images/groupe_large.avif 768w, images/groupe_xlarge.avif 1200w, images/groupe_xxlarge.avif 1920w">
+            <source type="image/webp" srcset="images/groupe_small.webp 192w, images/groupe_medium.webp 384w, images/groupe_large.webp 768w, images/groupe_xlarge.webp 1200w, images/groupe_xxlarge.webp 1920w">
+            <img loading="lazy" decoding="async" src="images/groupe.webp" alt="[existing]" longdesc="#chimie-desc" class="cours-img" onerror="this.src='images/groupe.jpg'">
+        </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Cours en Ligne -->
+    <section id="cours-en-ligne" class="cours-en-ligne">
+        <div class="container">
+            <h2 class="section-title">COURS EN LIGNE</h2>
+            <p class="section-subtitle">Ressources pédagogiques gratuites pour tous les niveaux</p>
+            <div class="niveaux-grid">
+                <a href="outils-maths.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>🔧 Outils Mathématiques</h3>
+                        <p>Ressources et outils pour faciliter l'apprentissage des mathématiques</p>
+                    </div>
+                </a>
+                <a href="fiches-methodes.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>📋 Fiches Méthodes</h3>
+                        <p>Méthodes et techniques pour réussir en sciences</p>
+                    </div>
+                </a>
+                <a href="seconde.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>📚 Seconde</h3>
+                        <p>Cours et exercices niveau Seconde</p>
+                    </div>
+                </a>
+                <a href="premiere-es.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>📊 1ère ES</h3>
+                        <p>Programme de Première ES</p>
+                    </div>
+                </a>
+                <a href="terminale-es.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>📈 Terminale ES</h3>
+                        <p>Programme de Terminale ES</p>
+                    </div>
+                </a>
+                <a href="premiere-sti2d.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>⚙️ 1ère STI2D</h3>
+                        <p>Programme de Première STI2D</p>
+                    </div>
+                </a>
+                <a href="terminale-sti2d.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>🔬 Terminale STI2D</h3>
+                        <p>Programme de Terminale STI2D</p>
+                    </div>
+                </a>
+                <a href="premiere-physique.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>⚗️ 1ère Spécialité Physique-Chimie</h3>
+                        <p>Programme de Première Spécialité Physique-Chimie</p>
+                    </div>
+                </a>
+                <a href="terminale-physique.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>🧪 Terminale Spécialité Physique-Chimie</h3>
+                        <p>Programme de Terminale Spécialité Physique-Chimie</p>
+                    </div>
+                </a>
+                <a href="capes.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>🎓 CAPES</h3>
+                        <p>Préparation au concours d'enseignement</p>
+                    </div>
+                </a>
+                <a href="classe-preparatoire.html" class="niveau-card-link">
+                    <div class="niveau-card">
+                        <h3>🚀 Classe préparatoire</h3>
+                        <p>Mathématiques et physique pour prépa</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section YouTube -->
+    <section id="youtube" class="youtube">
+        <div class="container">
+            <div class="youtube-header">
+                <div class="youtube-content">
+                    <h2 class="section-title">CHAÎNE YOUTUBE PETIT PROF</h2>
+                    <p class="section-subtitle">
+                        Voici la partie du site qui présente le travail que je réalise sur des vidéos pédagogiques publiées sur la chaîne YouTube : <strong>PetitProf</strong>
+                    </p>
+                </div>
+                <div class="youtube-image">
+                    <picture>
+            <source type="image/avif" srcset="images/petitprof_small.avif 192w, images/petitprof_medium.avif 384w, images/petitprof_large.avif 768w, images/petitprof_xlarge.avif 1200w, images/petitprof_xxlarge.avif 1920w">
+            <source type="image/webp" srcset="images/petitprof_small.webp 192w, images/petitprof_medium.webp 384w, images/petitprof_large.webp 768w, images/petitprof_xlarge.webp 1200w, images/petitprof_xxlarge.webp 1920w">
+            <img loading="lazy" decoding="async" src="images/petitprof.webp" alt="[existing]" longdesc="#chimie-desc" class="cours-img youtube-profile-img" onerror="this.src='images/petitprof.jpg'">
+        </picture>
+                </div>
+            </div>
+            <p class="youtube-note">
+                💡 <strong>Conseil :</strong> Tout like, commentaire et abonnement est d'une grande aide pour faire grandir la chaîne !
+            </p>
+            
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-iframe-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/OzkneemVUPY"
+                            title="Masse volumique - PetitProf"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h4>Masse volumique</h4>
+                    <p>Comprendre la masse volumique en physique-chimie</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-iframe-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/oHidTonrXGI"
+                            title="Quantité de matière - PetitProf"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h4>Quantité de matière</h4>
+                    <p>Les bases de la quantité de matière en chimie</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-iframe-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/JFILNmJsu_I"
+                            title="Schéma de Lewis - PetitProf"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h4>Schéma de Lewis des molécules</h4>
+                    <p>Apprendre à dessiner les schémas de Lewis</p>
+                </div>
+            </div>
+            
+            <div class="youtube-cta">
+                <a href="https://www.youtube.com/@PetitProf67" class="btn btn-youtube" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i> Voir la chaîne complète
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h3>Petit Prof</h3>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>t.weber.ac@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>07 45 10 66 71</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envoyez-moi un message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="sujet" name="sujet" placeholder="Sujet" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Petit Prof</h3>
+                    <p>Professeur de soutien pour tous</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#cours-particuliers">Cours Particuliers</a></li>
+                        <li><a href="#youtube">YouTube</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-moi</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@PetitProf67" class="social-link" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 par Petit Prof. Site créé avec ❤️ et du code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts Pyodide pour préchargement en arrière-plan -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="js/pyodide-service.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/cache-manager.js"></script>
+    
+    <!-- Préchargement différé de Pyodide -->
+    <script>
+        // Précharger Pyodide en arrière-plan après le chargement complet de la page
+        window.addEventListener('load', () => {
+            // Attendre 2 secondes pour ne pas impacter l'UX initiale
+            setTimeout(() => {
+                console.log('🔄 Démarrage du préchargement Pyodide en arrière-plan...');
+                
+                // Précharger Pyodide de manière asynchrone
+                if (window.PyodideService && window.PetitProf && window.PetitProf.pyodideService) {
+                    const pyodideService = window.PetitProf.pyodideService();
+                    if (pyodideService) {
+                        pyodideService.loadPyodide()
+                            .then(() => {
+                                console.log('✅ Pyodide préchargé avec succès ! Outils mathématiques prêts.');
+                                // Optionnel : afficher un indicateur discret
+                                showPyodideReadyIndicator();
+                            })
+                            .catch(error => {
+                                console.warn('⚠️ Préchargement Pyodide échoué:', error);
+                            });
+                    }
+                }
+            }, 2000);
+        });
+        
+        // Fonction pour afficher un indicateur discret
+        function showPyodideReadyIndicator() {
+            // Créer un petit indicateur discret
+            const indicator = document.createElement('div');
+            indicator.innerHTML = '🧮 Outils mathématiques prêts';
+            indicator.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #4CAF50, #45a049);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 500;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 1000;
+                opacity: 0;
+                transform: translateX(100%);
+                transition: all 0.3s ease;
+                pointer-events: none;
+            `;
+            
+            document.body.appendChild(indicator);
+            
+            // Animation d'entrée
+            setTimeout(() => {
+                indicator.style.opacity = '1';
+                indicator.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Disparition automatique après 3 secondes
+            setTimeout(() => {
+                indicator.style.opacity = '0';
+                indicator.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (indicator.parentNode) {
+                        indicator.parentNode.removeChild(indicator);
+                    }
+                }, 300);
+            }, 3000);
+        }
+    </script>
+    
+    <!-- Mobile Navigation Script -->
+    <script src="./js/mobile-nav.js"></script>
+    
+    <!-- Script pour le formulaire de contact avec EmailJS et reCAPTCHA v3 -->
+    <script>
+        // Configuration EmailJS
+        (function() {
+            emailjs.init("rZRIuvBhog5Bxe5tZ");
+        })();
+
+        // Script pour le formulaire de contact de la page d'accueil
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Désactiver le bouton pour éviter les doubles soumissions
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            
+            // Étape 1: Charger et exécuter reCAPTCHA v3 seulement lors de la soumission
+            const script = document.createElement('script');
+            script.src = 'https://www.google.com/recaptcha/api.js?render=6Ld8GsYrAAAAAI8_ELkYv536ZyoqUCxRodLlgUPe';
+            script.onload = () => {
+                grecaptcha.ready(() => {
+                    grecaptcha.execute('6Ld8GsYrAAAAAI8_ELkYv536ZyoqUCxRodLlgUPe', {action: 'contact_form'})
+                        .then(token => {
+                        // Étape 2: Récupérer les données du formulaire
+                        const formData = new FormData(this);
+                        const data = {};
+                        for (let [key, value] of formData.entries()) {
+                            data[key] = value;
+                        }
+                        
+                        // Étape 3: Préparer les données pour EmailJS (format compatible avec le template)
+                        const templateParams = {
+                            from_name: data.nom,
+                            from_email: data.email,
+                            phone: 'Non renseigné', // Le formulaire d'accueil n'a pas de téléphone
+                            subject: data.sujet,
+                            level: 'Non renseigné', // Le formulaire d'accueil n'a pas de niveau
+                            message: data.message,
+                            'g-recaptcha-response': token,
+                            to_email: 't.weber.ac@gmail.com'
+                        };
+                        
+                        // Étape 4: Envoyer l'email via EmailJS
+                        emailjs.send('service_ojdscgq', 'template_3uf79kd', templateParams)
+                            .then(response => {
+                                console.log('Email envoyé avec succès:', response);
+                                alert('✅ Message envoyé avec succès ! Je vous recontacterai dans les plus brefs délais.\n\n📧 t.weber.ac@gmail.com\n📱 07 45 10 66 71');
+                                this.reset();
+                            })
+                            .catch(error => {
+                                console.error('Erreur lors de l\'envoi:', error);
+                                alert('❌ Erreur lors de l\'envoi du message. Veuillez réessayer ou me contacter directement :\n\n📧 t.weber.ac@gmail.com\n📱 07 45 10 66 71');
+                            })
+                            .finally(() => {
+                                // Réactiver le bouton
+                                submitBtn.disabled = false;
+                                submitBtn.innerHTML = originalText;
+                            });
+                    })
+                    .catch(error => {
+                        console.error('Erreur reCAPTCHA:', error);
+                        alert('❌ Erreur de vérification. Veuillez réessayer.');
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalText;
+                    });
+                });
+            };
+            document.head.appendChild(script);
+        });
+    </script>
+    
+    <!-- Security Scripts -->
+    <script src="js/https-redirect.js"></script>
+    <script src="js/secure-cookies.js"></script>
+</body>
+</html>

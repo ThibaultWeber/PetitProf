@@ -1,0 +1,49 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://petit-prof.fr/sitemap.xml
+
+# Crawl-delay (respectueux pour le serveur)
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any in the future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all content types
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /documents/
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+Allow: /*.pdf
+Allow: /*.webp
+Allow: /*.avif
+Allow: /*.xml
+Allow: /*.json
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block bad bots (if needed)
+# User-agent: BadBot
+# Disallow: /
