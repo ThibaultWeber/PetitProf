@@ -13,6 +13,7 @@
 .tarifs-block--full .tarif-explication{margin-bottom:1.35rem}
 .tarifs-block--full .tarif-sous-titre{color:#1e293b;font-size:1.15rem;font-weight:600;margin:0 0 0.65rem}
 .tarifs-block--full .tarif-explication p{color:#64748b;font-size:1.05rem;line-height:1.7;margin:0}
+.tarifs-block--full .tarif-info-btn{display:inline-block;margin-top:1.1rem;padding:0.75rem 1.25rem;font-size:0.98rem;line-height:1.35;text-align:center;max-width:100%;white-space:normal}
 .tarif-title-br{display:none}
 .tarif-title-dash{display:inline}
 
